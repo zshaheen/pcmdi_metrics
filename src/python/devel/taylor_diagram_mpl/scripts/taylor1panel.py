@@ -6,7 +6,7 @@ import json
 import sys, os
 import getopt
 import pcmdi_metrics
-from pcmdi_metrics.add_taylor_diagram import TaylorDiagram
+from pcmdi_metrics.taylor_diagram_mpl import TaylorDiagram
 
 fjson = open(
     os.path.join(
@@ -99,7 +99,7 @@ for mod in mods:
 
 print 'mods are ', mods
 
-w = sys.stdin.readline()
+#w = sys.stdin.readline()
 
 samples = {}
 winter = []
