@@ -8,6 +8,8 @@ import getopt
 import pcmdi_metrics
 from pcmdi_metrics.taylor_diagram_mpl import TaylorDiagram
 
+test = True
+
 fjson = open(
     os.path.join(
         pcmdi_metrics.__path__[0],
@@ -54,7 +56,7 @@ for o,p in opts:
         json_path=p
     if o in ['-v','--var']:
         var = p
-    if o in ['-s','--season']:
+    if o in ['-s','--season']: # djf / mam / jja / son / ann
         season=p
     if o in ['-o','--plotpath']:
         pathout=p
@@ -82,10 +84,11 @@ fjson = open(
 dd = json.loads(fjson.read())
 fjson.close()
 
-### TEMPORARY UNTIL JSON FILES ARE UPDATED TO INCLUDED STD
-pi = '/work/gleckler1/processed_data/metrics_package/metrics_results/cmip5clims_metrics_package-amip/v1.1/pr_2.5x2.5_esmf_linear_metrics.json'
-dd = json.load(open(pi,'rb'))
-####
+if test:
+    ### TEMPORARY UNTIL JSON FILES ARE UPDATED TO INCLUDED STD
+    pi = '/work/gleckler1/processed_data/metrics_package/metrics_results/cmip5clims_metrics_package-amip/v1.1/pr_2.5x2.5_esmf_linear_metrics.json'
+    #pi = '/Users/lee1043/Documents/Research/PMP/pcmdi_metrics/data/CMIP_metrics_results/CMIP5/amip/pr_2.5x2.5_esmf_linear_metrics.json'
+    dd = json.load(open(pi,'rb'))
 
 #print dd['CCSM4'].keys()
 mods = dd.keys()
@@ -107,8 +110,8 @@ print 'mods are ', mods
 samples = {}
 winter = []
 for mod in mods:
-  cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_djf_NHEX'])
-  std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_djf_NHEX'])*28.
+  cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_NHEX'])
+  std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_NHEX'])*28.
   winter.append([std,cor,str(mod)])
 
 samples['winter'] = winter
@@ -158,8 +161,9 @@ print 'above fig.legend'
 
 print 'below fig.legend'
 
-PLT.savefig(pathout + '/' + var + '_' + exp + '_taylor_1panel.png')
+PLT.savefig(pathout + '/' + var + '_' + exp + '_taylor_1panel_' + season + '.png')
 print 'below save plot'
 
-
-#PLT.show()
+if test:
+    PLT.ion()
+    PLT.show()
