@@ -28,7 +28,7 @@ fjson.close()
 
 print 'fjson is ', fjson
 
-w = sys.stdin.readline()
+#w = sys.stdin.readline()
 
 # Reference std
 stdrefs = dict(winter=48.491)
@@ -90,7 +90,10 @@ dd = json.load(open(pi,'rb'))
 #print dd['CCSM4'].keys()
 mods = dd.keys()
 
+
+
 for mod in mods:
+   print 'here is mod ', mod
    if mod in ['METRICS','GridInfo','RegionalMasking','References','DISCLAIMER', 'metrics_git_sha1','uvcdat_version']:
     try:
      mods.remove(mod)
@@ -106,7 +109,7 @@ winter = []
 for mod in mods:
   cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_djf_NHEX'])
   std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_djf_NHEX'])*28.
-  winter.append([std,cor,mod])
+  winter.append([std,cor,str(mod)])
 
 samples['winter'] = winter
 
@@ -149,7 +152,14 @@ fig.legend(dia.samplePoints,
            [ p.get_label() for p in dia.samplePoints ],
            numpoints=1, prop=dict(size='small'), loc='right')
 
-fig.tight_layout()
+print 'above fig.legend'
+
+#fig.tight_layout()
+
+print 'below fig.legend'
 
 PLT.savefig(pathout + '/' + var + '_' + exp + '_taylor_1panel.png')
-PLT.show()
+print 'below save plot'
+
+
+#PLT.show()
