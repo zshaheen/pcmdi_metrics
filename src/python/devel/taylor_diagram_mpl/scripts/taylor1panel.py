@@ -107,7 +107,7 @@ else:
   rects = {}
   rects[season] = 111 # subplot location
   fig = PLT.figure(figsize=(11,8)) # optimized figure size for one subplot
-  fig_filename = var + '_' + exp + '_taylor_1panel_' + season + dom
+  fig_filename = var + '_' + exp + '_taylor_1panel_' + season + '_' + dom
 
 fig.suptitle(var.title()+', '+(exp+', '+dom).upper(), size='x-large') # Giving title for the entire canvas
 
