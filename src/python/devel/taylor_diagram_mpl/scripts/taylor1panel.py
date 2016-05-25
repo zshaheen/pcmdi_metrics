@@ -34,10 +34,6 @@ print 'fjson is ', fjson
 #x99 = [0.05, 19.0] # For Prcp, this is for 99th level (r = 0.254)
 #y99 = [0.0, 70.0]
 
-# Below is for subplot location in the canvas
-#rects = dict(djf=221)
-rects = dict(djf=111)
-
 args=sys.argv[1:]
 letters='j:v:s:e:d:o:'
 keywords=['json=','var=','season=','exp=','domain=','plotpath=']
@@ -75,7 +71,7 @@ fjson = open(
         "CMIP_metrics_results",
         "CMIP5",
         "amip",
-        "rlut_2.5x2.5_esmf_linear_metrics.json"))
+        var+"_2.5x2.5_esmf_linear_metrics.json"))
 
 dd = json.loads(fjson.read())
 fjson.close()
@@ -85,38 +81,50 @@ if test:
     pi = '/work/gleckler1/processed_data/metrics_package/metrics_results/cmip5clims_metrics_package-amip/v1.1/pr_2.5x2.5_esmf_linear_metrics.json'
     #pi = '/Users/lee1043/Documents/Research/PMP/pcmdi_metrics/data/CMIP_metrics_results/CMIP5/amip/pr_2.5x2.5_esmf_linear_metrics.json'
     dd = json.load(open(pi,'rb'))
+    var = 'pr'
+
+if var == 'pr':
+    unit_adj = 28.
+else:
+    unit_adj = 1.
 
 mods = dd.keys()
 
 for mod in mods:
-   print 'here is mod ', mod
    if mod in ['METRICS','GridInfo','RegionalMasking','References','DISCLAIMER', 'metrics_git_sha1','uvcdat_version']:
     try:
      mods.remove(mod)
     except:
      pass
 
-print 'mods are ', mods
+# For general...
+seasons = [season]
+if season == 'all':
+  seasons = ['djf', 'mam', 'jja', 'son']
+  rects = dict(djf=221)
+  rects = dict(mam=222)
+  rects = dict(jja=223)
+  rects = dict(son=224)
 
-#w = sys.stdin.readline()
+# Below is for subplot location in the canvas
+rects = dict(djf=111)
 
 # Reference std from obs
-#stdrefs = dict(djf=float(dd[mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_NHEX'])*28.)
 stdrefs = {}
-stdrefs[season] = float(dd[mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_NHEX'])*28.
+stdrefs[season] = float(dd[mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_'+dom])*unit_adj
 
 samples = {}
 all_mods = []
 for mod in mods:
-  cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_NHEX'])
-  std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_NHEX'])*28.
+  cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_'+dom])
+  std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_'+dom])*unit_adj
   all_mods.append([std,cor,str(mod)])
 samples[season] = all_mods
 
 colors = PLT.matplotlib.cm.Set1(NP.linspace(0,1,len(samples[season])))
 
 fig = PLT.figure(figsize=(11,8)) # 11,8
-fig.suptitle("", size='x-large') # Giving title for the entire canvas
+fig.suptitle(var.title()+', '+(exp+', '+dom).upper(), size='x-large') # Giving title for the entire canvas
 
 for season in ['djf']:
 
@@ -151,7 +159,7 @@ fig.legend(dia.samplePoints,
            [ p.get_label() for p in dia.samplePoints ],
            numpoints=1, prop=dict(size='small'), loc='right')
 
-fig.tight_layout()
+#fig.tight_layout()
 PLT.savefig(pathout + '/' + var + '_' + exp + '_taylor_1panel_' + season + '.png')
 
 if test:
