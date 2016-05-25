@@ -97,36 +97,35 @@ for mod in mods:
     except:
      pass
 
-# For general...
 seasons = [season]
 if season == 'all':
   seasons = ['djf', 'mam', 'jja', 'son']
-  rects = dict(djf=221)
-  rects = dict(mam=222)
-  rects = dict(jja=223)
-  rects = dict(son=224)
+  rects = {'djf':221, 'mam':222, 'jja':223, 'son':224} # subplot location
+  fig = PLT.figure(figsize=(14,11)) # optimized figure size for four subplots
+  fig_filename = var + '_' + exp + '_taylor_4panel_' + season
+else:
+  rects = {}
+  rects[season] = 111 # subplot location
+  fig = PLT.figure(figsize=(11,8)) # optimized figure size for one subplot
+  fig_filename = var + '_' + exp + '_taylor_1panel_' + season
 
-# Below is for subplot location in the canvas
-rects = dict(djf=111)
-
-# Reference std from obs
-stdrefs = {}
-stdrefs[season] = float(dd[mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_'+dom])*unit_adj
-
-samples = {}
-all_mods = []
-for mod in mods:
-  cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_'+dom])
-  std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_'+dom])*unit_adj
-  all_mods.append([std,cor,str(mod)])
-samples[season] = all_mods
-
-colors = PLT.matplotlib.cm.Set1(NP.linspace(0,1,len(samples[season])))
-
-fig = PLT.figure(figsize=(11,8)) # 11,8
 fig.suptitle(var.title()+', '+(exp+', '+dom).upper(), size='x-large') # Giving title for the entire canvas
 
-for season in ['djf']:
+stdrefs = {}
+
+for season in seasons:
+    # Reference std from obs
+    stdrefs[season] = float(dd[mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_'+dom])*unit_adj
+
+    samples = {}
+    all_mods = []
+    for mod in mods:
+        cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_'+dom])
+        std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_'+dom])*unit_adj
+        all_mods.append([std,cor,str(mod)])
+    samples[season] = all_mods
+
+    colors = PLT.matplotlib.cm.Set1(NP.linspace(0,1,len(samples[season])))
 
     dia = TaylorDiagram(stdrefs[season], fig=fig, rect=rects[season],
                         label='Reference')
@@ -159,8 +158,7 @@ fig.legend(dia.samplePoints,
            [ p.get_label() for p in dia.samplePoints ],
            numpoints=1, prop=dict(size='small'), loc='right')
 
-#fig.tight_layout()
-PLT.savefig(pathout + '/' + var + '_' + exp + '_taylor_1panel_' + season + '.png')
+PLT.savefig(pathout + '/' + fig_filename + '.png')
 
 if test:
     PLT.ion()
