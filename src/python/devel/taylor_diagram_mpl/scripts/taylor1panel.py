@@ -102,16 +102,17 @@ if season == 'all':
   seasons = ['djf', 'mam', 'jja', 'son']
   rects = {'djf':221, 'mam':222, 'jja':223, 'son':224} # subplot location
   fig = PLT.figure(figsize=(14,11)) # optimized figure size for four subplots
-  fig_filename = var + '_' + exp + '_taylor_4panel_' + season
+  fig_filename = var + '_' + exp + '_taylor_4panel_' + season + '_' + dom
 else:
   rects = {}
   rects[season] = 111 # subplot location
   fig = PLT.figure(figsize=(11,8)) # optimized figure size for one subplot
-  fig_filename = var + '_' + exp + '_taylor_1panel_' + season
+  fig_filename = var + '_' + exp + '_taylor_1panel_' + season + dom
 
 fig.suptitle(var.title()+', '+(exp+', '+dom).upper(), size='x-large') # Giving title for the entire canvas
 
 stdrefs = {}
+source_ref = dd[mods[0]]["defaultReference"]['source']
 
 for season in seasons:
     # Reference std from obs
@@ -128,7 +129,8 @@ for season in seasons:
     colors = PLT.matplotlib.cm.Set1(NP.linspace(0,1,len(samples[season])))
 
     dia = TaylorDiagram(stdrefs[season], fig=fig, rect=rects[season],
-                        label='Reference')
+                        #label='Reference')
+                        label=source_ref)
 
     # Diagonal lines, turned off now ---
     #dia.ax.plot(x95,y95,color='k')
@@ -147,7 +149,6 @@ for season in seasons:
     dia.ax.clabel(contours, inline=1, fontsize=10, fmt='%.1f')
     # Tricky: ax is the polar ax (used for plots), _ax is the
     # container (used for layout)
-    #dia._ax.set_title(season.capitalize()) # Title for the subplot
     dia._ax.set_title(season.upper()) # Title for the subplot
 
 # Add a figure legend and title. For loc option, place x,y tuple inside [ ].
