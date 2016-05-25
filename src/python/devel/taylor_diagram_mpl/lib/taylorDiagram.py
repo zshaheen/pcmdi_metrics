@@ -41,8 +41,8 @@ class TaylorDiagram(object):
         if fig is None:
             fig = PLT.figure()
 
-        #ax = FA.FloatingSubplot(fig, rect, grid_helper=ghelper)
-        ax = FA.FloatingSubplot(fig,111, grid_helper=ghelper)
+        ax = FA.FloatingSubplot(fig, rect, grid_helper=ghelper)
+        #ax = FA.FloatingSubplot(fig,111, grid_helper=ghelper)
         fig.add_subplot(ax)
 
         # Adjust axes

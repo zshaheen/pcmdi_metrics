@@ -22,25 +22,21 @@ fjson = open(
         "CMIP5",
         "amip",
         "rlut_2.5x2.5_esmf_linear_metrics.json"))
-
+        #../../../../share/CMIP_metrics_results//CMIP5/amip
 obs_dic = json.loads(fjson.read())
 fjson.close()
 
-#../../../../share/CMIP_metrics_results//CMIP5/amip
-
 print 'fjson is ', fjson
 
-#w = sys.stdin.readline()
+# Below if for dia.ax.plot -- turn off now
+#x95 = [0.05, 13.9] # For Prcp, this is for 95th level (r = 0.195)
+#y95 = [0.0, 71.0]
+#x99 = [0.05, 19.0] # For Prcp, this is for 99th level (r = 0.254)
+#y99 = [0.0, 70.0]
 
-# Reference std
-stdrefs = dict(winter=48.491)
-
-x95 = [0.05, 13.9] # For Prcp, this is for 95th level (r = 0.195)
-y95 = [0.0, 71.0]
-x99 = [0.05, 19.0] # For Prcp, this is for 99th level (r = 0.254)
-y99 = [0.0, 70.0]
-
-rects = dict(winter=221)
+# Below is for subplot location in the canvas
+#rects = dict(djf=221)
+rects = dict(djf=111)
 
 args=sys.argv[1:]
 letters='j:v:s:e:d:o:'
@@ -90,10 +86,7 @@ if test:
     #pi = '/Users/lee1043/Documents/Research/PMP/pcmdi_metrics/data/CMIP_metrics_results/CMIP5/amip/pr_2.5x2.5_esmf_linear_metrics.json'
     dd = json.load(open(pi,'rb'))
 
-#print dd['CCSM4'].keys()
 mods = dd.keys()
-
-
 
 for mod in mods:
    print 'here is mod ', mod
@@ -107,30 +100,32 @@ print 'mods are ', mods
 
 #w = sys.stdin.readline()
 
+# Reference std from obs
+#stdrefs = dict(djf=float(dd[mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_NHEX'])*28.)
+stdrefs = {}
+stdrefs[season] = float(dd[mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_NHEX'])*28.
+
 samples = {}
-winter = []
+all_mods = []
 for mod in mods:
   cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_NHEX'])
   std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_NHEX'])*28.
-  winter.append([std,cor,str(mod)])
+  all_mods.append([std,cor,str(mod)])
+samples[season] = all_mods
 
-samples['winter'] = winter
+colors = PLT.matplotlib.cm.Set1(NP.linspace(0,1,len(samples[season])))
 
-colors = PLT.matplotlib.cm.Set1(NP.linspace(0,1,len(samples['winter'])))
+fig = PLT.figure(figsize=(11,8)) # 11,8
+fig.suptitle("", size='x-large') # Giving title for the entire canvas
 
-
-#w = sys.stdin.readline()
-
-fig = PLT.figure(figsize=(11,8))  # 11,8
-fig.suptitle("", size='x-large')
-
-for season in ['winter']:
+for season in ['djf']:
 
     dia = TaylorDiagram(stdrefs[season], fig=fig, rect=rects[season],
                         label='Reference')
 
-    dia.ax.plot(x95,y95,color='k')
-    dia.ax.plot(x99,y99,color='k')
+    # Diagonal lines, turned off now ---
+    #dia.ax.plot(x95,y95,color='k')
+    #dia.ax.plot(x99,y99,color='k')
 
     # Add samples to Taylor diagram
     for i,(stddev,corrcoef,name) in enumerate(samples[season]):
@@ -145,7 +140,8 @@ for season in ['winter']:
     dia.ax.clabel(contours, inline=1, fontsize=10, fmt='%.1f')
     # Tricky: ax is the polar ax (used for plots), _ax is the
     # container (used for layout)
-    dia._ax.set_title(season.capitalize())
+    #dia._ax.set_title(season.capitalize()) # Title for the subplot
+    dia._ax.set_title(season.upper()) # Title for the subplot
 
 # Add a figure legend and title. For loc option, place x,y tuple inside [ ].
 # Can also use special options here:
@@ -155,14 +151,8 @@ fig.legend(dia.samplePoints,
            [ p.get_label() for p in dia.samplePoints ],
            numpoints=1, prop=dict(size='small'), loc='right')
 
-print 'above fig.legend'
-
-#fig.tight_layout()
-
-print 'below fig.legend'
-
+fig.tight_layout()
 PLT.savefig(pathout + '/' + var + '_' + exp + '_taylor_1panel_' + season + '.png')
-print 'below save plot'
 
 if test:
     PLT.ion()
