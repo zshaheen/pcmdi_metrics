@@ -80,6 +80,9 @@ if test:
     ### TEMPORARY UNTIL JSON FILES ARE UPDATED TO INCLUDED STD
     #pi = '/work/gleckler1/processed_data/metrics_package/metrics_results/cmip5clims_metrics_package-amip/v1.1/pr_2.5x2.5_esmf_linear_metrics.json'
     pi = '/Users/lee1043/Documents/Research/PMP/pcmdi_metrics/data/CMIP_metrics_results/CMIP5/amip/pr_2.5x2.5_esmf_linear_metrics.json'
+    pi = '/work/gleckler1/processed_data/metrics_package/metrics_results/cmip5clims_metrics_package-amip/v1.1/pr_2.5x2.5_esmf_linear_metrics.json'
+
+
     dd = json.load(open(pi,'rb'))
     var = 'pr'
 
@@ -88,7 +91,7 @@ if var == 'pr':
 else:
     unit_adj = 1.
 
-mods = dd.keys()
+mods = dd['RESULTS'].keys()
 
 for mod in mods:
    if mod in ['METRICS','GridInfo','RegionalMasking','References','DISCLAIMER', 'metrics_git_sha1','uvcdat_version']:
@@ -112,17 +115,17 @@ else:
 fig.suptitle(var.title()+', '+(exp+', '+dom).upper(), size='x-large') # Giving title for the entire canvas
 
 stdrefs = {}
-source_ref = dd[mods[0]]["defaultReference"]['source']
+source_ref = dd['RESULTS'][mods[0]]["defaultReference"]['source']
 
 for season in seasons:
     # Reference std from obs
-    stdrefs[season] = float(dd[mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_'+dom])*unit_adj
+    stdrefs[season] = float(dd['RESULTS'][mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_'+dom])*unit_adj
 
     samples = {}
     all_mods = []
     for mod in mods:
-        cor = float(dd[mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_'+dom])
-        std = float(dd[mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_'+dom])*unit_adj
+        cor = float(dd['RESULTS'][mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_'+dom])
+        std = float(dd['RESULTS'][mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_'+dom])*unit_adj
         all_mods.append([std,cor,str(mod)])
     samples[season] = all_mods
 
