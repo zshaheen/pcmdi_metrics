@@ -8,7 +8,7 @@ import getopt
 import pcmdi_metrics
 from pcmdi_metrics.taylor_diagram_mpl import TaylorDiagram
 
-test = True
+test = False  #True
 
 fjson = open(
     os.path.join(
@@ -22,11 +22,10 @@ fjson = open(
         "CMIP5",
         "amip",
         "rlut_2.5x2.5_esmf_linear_metrics.json"))
-        #../../../../share/CMIP_metrics_results//CMIP5/amip
-obs_dic = json.loads(fjson.read())
+tmp = json.loads(fjson.read())
 fjson.close()
 
-print 'fjson is ', fjson
+#print 'fjson is ', fjson
 
 # Below if for dia.ax.plot -- turn off now
 #x95 = [0.05, 13.9] # For Prcp, this is for 95th level (r = 0.195)
@@ -76,9 +75,12 @@ fjson = open(
 dd = json.loads(fjson.read())
 fjson.close()
 
+fj = open(json_path)
+dd = json.loads(fj.read())
+fj.close()
+
 if test:
     ### TEMPORARY UNTIL JSON FILES ARE UPDATED TO INCLUDED STD
-    #pi = '/work/gleckler1/processed_data/metrics_package/metrics_results/cmip5clims_metrics_package-amip/v1.1/pr_2.5x2.5_esmf_linear_metrics.json'
     pi = '/Users/lee1043/Documents/Research/PMP/pcmdi_metrics/data/CMIP_metrics_results/CMIP5/amip/pr_2.5x2.5_esmf_linear_metrics.json'
     pi = '/work/gleckler1/processed_data/metrics_package/metrics_results/cmip5clims_metrics_package-amip/v1.1/pr_2.5x2.5_esmf_linear_metrics.json'
 
@@ -92,13 +94,6 @@ else:
     unit_adj = 1.
 
 mods = dd['RESULTS'].keys()
-
-for mod in mods:
-   if mod in ['METRICS','GridInfo','RegionalMasking','References','DISCLAIMER', 'metrics_git_sha1','uvcdat_version']:
-    try:
-     mods.remove(mod)
-    except:
-     pass
 
 seasons = [season]
 if season == 'all':
