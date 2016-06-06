@@ -10,29 +10,6 @@ from pcmdi_metrics.taylor_diagram_mpl import TaylorDiagram
 
 test = False  #True
 
-fjson = open(
-    os.path.join(
-        pcmdi_metrics.__path__[0],
-        "..",
-        "..",
-        "..",
-        "..",
-        "share",
-        "CMIP_metrics_results",
-        "CMIP5",
-        "amip",
-        "rlut_2.5x2.5_esmf_linear_metrics.json"))
-tmp = json.loads(fjson.read())
-fjson.close()
-
-#print 'fjson is ', fjson
-
-# Below if for dia.ax.plot -- turn off now
-#x95 = [0.05, 13.9] # For Prcp, this is for 95th level (r = 0.195)
-#y95 = [0.0, 71.0]
-#x99 = [0.05, 19.0] # For Prcp, this is for 99th level (r = 0.254)
-#y99 = [0.0, 70.0]
-
 args=sys.argv[1:]
 letters='j:v:s:e:d:o:'
 keywords=['json=','var=','season=','exp=','domain=','plotpath=']
@@ -59,34 +36,9 @@ for o,p in opts:
 print json_path,' ',season,' ', pathout,' ', exp,' ', var , ' ', dom
 print 'after args'
 
-fjson = open(
-    os.path.join(
-        pcmdi_metrics.__path__[0],
-        "..",
-        "..",
-        "..",
-        "..",
-        "share",
-        "CMIP_metrics_results",
-        "CMIP5",
-        "amip",
-        var+"_2.5x2.5_esmf_linear_metrics.json"))
-
-dd = json.loads(fjson.read())
-fjson.close()
-
 fj = open(json_path)
 dd = json.loads(fj.read())
 fj.close()
-
-if test:
-    ### TEMPORARY UNTIL JSON FILES ARE UPDATED TO INCLUDED STD
-    pi = '/Users/lee1043/Documents/Research/PMP/pcmdi_metrics/data/CMIP_metrics_results/CMIP5/amip/pr_2.5x2.5_esmf_linear_metrics.json'
-    pi = '/work/gleckler1/processed_data/metrics_package/metrics_results/cmip5clims_metrics_package-amip/v1.1/pr_2.5x2.5_esmf_linear_metrics.json'
-
-
-    dd = json.load(open(pi,'rb'))
-    var = 'pr'
 
 if var == 'pr':
     unit_adj = 28.
@@ -129,10 +81,6 @@ for season in seasons:
     dia = TaylorDiagram(stdrefs[season], fig=fig, rect=rects[season],
                         #label='Reference')
                         label=source_ref)
-
-    # Diagonal lines, turned off now ---
-    #dia.ax.plot(x95,y95,color='k')
-    #dia.ax.plot(x99,y99,color='k')
 
     # Add samples to Taylor diagram
     for i,(stddev,corrcoef,name) in enumerate(samples[season]):
