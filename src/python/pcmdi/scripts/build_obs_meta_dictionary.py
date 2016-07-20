@@ -73,7 +73,7 @@ obs_dic_in = {'rlut': {'default': 'CERES'},
               'tos': {'default': 'UKMETOFFICE-HadISST-v1-1'},
               'zos': {'default': 'CNES-AVISO-L4'},
               'sos': {'default': 'NODC-WOA09'},
-              'ts': {'default': 'HadISST1'}
+              'ts': {'default': 'ERAINT'}
 
               }
 
@@ -104,8 +104,12 @@ for l in lst:
 
         partial_filename = subp.split('ac')[1]
 
-        realm = partial_filename.split('_')[1]
-        period = partial_filename.split('_')[3]
+        print 'TESTING ', partial_filename.split('_')
+        realm = partial_filename.split('_')[2]
+        try:
+         period = partial_filename.split('_')[4]  # IN HERE BECAUSE OF INCONSISTENT ATM OCN PERIODS SYNTAX
+        except:
+         period = partial_filename.split('_')[3]
         period = period.split('-clim.nc')[0]
 
         obs_dic[var][product]['filename'] = filename

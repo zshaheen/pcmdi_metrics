@@ -1,7 +1,7 @@
 {
     "hfss": {
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "f4ae4c9033830ef12a666fba2a6ba9b0",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 17:28:00 2011",
@@ -12,7 +12,7 @@
     },
     "hur": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "968e4b2340c6d189a9a076c665ce3c5e",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 17:50:28 2011",
@@ -21,7 +21,7 @@
             "shape": "(12, 23, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "f5ad752af20fdf03c9c492a54deb9b36",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 17:48:17 2011",
@@ -32,7 +32,7 @@
     },
     "hus": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "bedc62255919424d66356c98d457e095",
             "RefName": "ERA40",
             "RefTrackingDate": "Wed Jul 13 10:11:17 2011",
@@ -41,7 +41,7 @@
             "shape": "(12, 23, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "b4ff5a481e368b75170487cb2fca3f5b",
             "RefName": "ERAINT",
             "RefTrackingDate": "Wed Jul 13 10:08:12 2011",
@@ -50,7 +50,7 @@
             "shape": "(12, 17, 121, 240)"
         },
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "bcd341cb2b19bf53eecac8ed4497d3a8",
             "RefName": "JRA25",
             "RefTrackingDate": "Wed Jul 13 10:06:19 2011",
@@ -64,7 +64,7 @@
     },
     "huss": {
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "6a4a8d5516fc4e13ef10443d0b3d5909",
             "RefName": "JRA25",
             "RefTrackingDate": "Tue Jul 12 18:10:35 2011",
@@ -75,7 +75,7 @@
     },
     "pr": {
         "GPCP": {
-            "CMIP_CMOR_TABLE": "GPCP",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "144d2807b833ced066db4956014c9472",
             "RefName": "GPCP",
             "RefTrackingDate": "Tue Jul 12 17:28:09 2011",
@@ -87,7 +87,7 @@
     },
     "prw": {
         "RSS": {
-            "CMIP_CMOR_TABLE": "RSS",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "76cd666442e53ddca1d000a3d390b00e",
             "RefName": "RSS",
             "RefTrackingDate": "Tue Jul 12 18:10:43 2011",
@@ -99,7 +99,7 @@
     },
     "psl": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "e8564f7b1f228da6eef1ce5dfa98dec7",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 17:28:25 2011",
@@ -108,7 +108,7 @@
             "shape": "(12, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "ecc0ac7ded5ef4a42a9733d57783e3bd",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 17:28:38 2011",
@@ -121,7 +121,7 @@
     },
     "rlds": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "e1f5aa61b4501d005731ac6656372b39",
             "RefName": "CERES",
             "RefTrackingDate": "Wed Jun  1 14:02:18 2016",
@@ -133,10 +133,10 @@
     },
     "rltcre": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
-            "MD5sum": "07cb1fbed2fdc51ffafc689b35ac05ce",
+            "CMIP_CMOR_TABLE": "000001-000012",
+            "MD5sum": "e736a924ce2a9e6097f9a1ff652176bf",
             "RefName": "CERES",
-            "RefTrackingDate": "Wed Jun  1 16:30:44 2016",
+            "RefTrackingDate": "Wed Jul  6 10:51:41 2016",
             "filename": "rltcre_CERES_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 180, 360)"
@@ -145,7 +145,7 @@
     },
     "rlus": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "741ac684af3ad1e190ca14edf36663d0",
             "RefName": "CERES",
             "RefTrackingDate": "Wed Jun  1 14:02:18 2016",
@@ -157,10 +157,10 @@
     },
     "rlut": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "146eec5e8a734fedbbdd0909921530f2",
             "RefName": "CERES",
-            "RefTrackingDate": "Wed Jun  1 16:30:44 2016",
+            "RefTrackingDate": "Wed Jul  6 10:51:41 2016",
             "filename": "rlut_CERES_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 180, 360)"
@@ -169,10 +169,10 @@
     },
     "rlutcs": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "7e77061fb5d5399ecad4360779ceb63f",
             "RefName": "CERES",
-            "RefTrackingDate": "Wed Jun  1 16:30:44 2016",
+            "RefTrackingDate": "Wed Jul  6 10:51:40 2016",
             "filename": "rlutcs_CERES_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 180, 360)"
@@ -181,7 +181,7 @@
     },
     "rsds": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "f5e81fc625b1bce448020cbeb79b1fd1",
             "RefName": "CERES",
             "RefTrackingDate": "Wed Jun  1 14:02:17 2016",
@@ -193,7 +193,7 @@
     },
     "rsdscs": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "8255a25979cacfae6561b31658f49f43",
             "RefName": "CERES",
             "RefTrackingDate": "Wed Jun  1 14:02:18 2016",
@@ -205,7 +205,7 @@
     },
     "rsdt": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "033c05ea6447ec2b3be88016014ac2ef",
             "RefName": "CERES",
             "RefTrackingDate": "Wed Jun  1 14:32:40 2016",
@@ -217,10 +217,10 @@
     },
     "rst": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "45ee2704bd9013c4f6589cbcccb4f893",
             "RefName": "CERES",
-            "RefTrackingDate": "Wed Jun  1 16:30:44 2016",
+            "RefTrackingDate": "Wed Jul  6 10:51:39 2016",
             "filename": "rst_CERES_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 180, 360)"
@@ -229,10 +229,10 @@
     },
     "rstcre": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
-            "MD5sum": "43ae9b34119b1d885a53e087720c1a72",
+            "CMIP_CMOR_TABLE": "000001-000012",
+            "MD5sum": "eaf13953bf323ca0aef058028f4c1a9c",
             "RefName": "CERES",
-            "RefTrackingDate": "Wed Jun  1 16:30:43 2016",
+            "RefTrackingDate": "Wed Jul  6 10:51:37 2016",
             "filename": "rstcre_CERES_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 180, 360)"
@@ -241,7 +241,7 @@
     },
     "rsuscs": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "822e5dd388c12b2a520bce79a34b765c",
             "RefName": "CERES",
             "RefTrackingDate": "Wed Jun  1 14:02:18 2016",
@@ -252,10 +252,10 @@
     },
     "rsutcs": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "e77f527db0bf303ec35e4df7e2c662fb",
             "RefName": "CERES",
-            "RefTrackingDate": "Wed Jun  1 16:30:45 2016",
+            "RefTrackingDate": "Wed Jul  6 10:51:41 2016",
             "filename": "rsutcs_CERES_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 180, 360)"
@@ -264,10 +264,10 @@
     },
     "rtnet": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "b3b28ee6496fe87a79dad308fc935f78",
             "RefName": "CERES",
-            "RefTrackingDate": "Wed Jun  1 16:30:44 2016",
+            "RefTrackingDate": "Wed Jul  6 10:51:40 2016",
             "filename": "rtnet_CERES_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 180, 360)"
@@ -275,10 +275,10 @@
     },
     "rtnetcre": {
         "CERES": {
-            "CMIP_CMOR_TABLE": "CERES",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "d9d8973d589548124049d527331d5799",
             "RefName": "CERES",
-            "RefTrackingDate": "Wed Jun  1 16:30:43 2016",
+            "RefTrackingDate": "Wed Jul  6 10:51:38 2016",
             "filename": "rtnetcre_CERES_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 180, 360)"
@@ -309,9 +309,39 @@
             "shape": "(180, 360)"
         }
     },
+    "sos": {
+        "JPL-Aquarius-v2": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "648c3f92abe91223ac24645cac653e6f",
+            "RefName": "JPL-Aquarius-v2",
+            "RefTrackingDate": "Wed Jan 15 10:29:05 2014",
+            "filename": "sos_pcmdi-metrics_Omon_JPL-Aquarius-v2_201108-201304-clim.nc",
+            "period": "201108-201304",
+            "shape": "(12, 180, 360)"
+        },
+        "NODC-WOA09": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "c645c6382f41af91019470e9c0bfc3a6",
+            "RefName": "NODC-WOA09",
+            "RefTrackingDate": "Wed Jan 15 10:33:04 2014",
+            "filename": "sos_pcmdi-metrics_Omon_NODC-WOA09_177201-200812-clim.nc",
+            "period": "177201-200812",
+            "shape": "(12, 180, 360)"
+        },
+        "UCSD-ARGO": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "1fb5933f16a4644bd429ab0d618f06f0",
+            "RefName": "UCSD-ARGO",
+            "RefTrackingDate": "Wed Jan 15 10:48:30 2014",
+            "filename": "sos_pcmdi-metrics_Omon_UCSD-ARGO_200401-201212-clim.nc",
+            "period": "200401-201212",
+            "shape": "(12, 260, 720)"
+        },
+        "default": "NODC-WOA09"
+    },
     "ta": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "6b3e6c1cb5c26e76140d2580ef80def0",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 18:08:51 2011",
@@ -320,7 +350,7 @@
             "shape": "(12, 23, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "9036381da7020e5edff322435d1e0dba",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 18:06:41 2011",
@@ -329,7 +359,7 @@
             "shape": "(12, 17, 121, 240)"
         },
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "38835cb0b12bbd780ff783ff6b8a18fc",
             "RefName": "JRA25",
             "RefTrackingDate": "Tue Jul 12 18:05:04 2011",
@@ -343,7 +373,7 @@
     },
     "tas": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "cd563e1c34f20b6aefc5c849cf4d153a",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 17:45:41 2011",
@@ -352,7 +382,7 @@
             "shape": "(12, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "b53a23756718590f89a26064c76c6b05",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 17:46:20 2011",
@@ -361,7 +391,7 @@
             "shape": "(12, 121, 240)"
         },
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "77cc9aab998c684e75f1ccea24f42225",
             "RefName": "JRA25",
             "RefTrackingDate": "Tue Jul 12 17:46:07 2011",
@@ -375,7 +405,7 @@
     },
     "tauu": {
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "6fd1193a64e63da8d5f2fde9de303cbc",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 18:10:04 2011",
@@ -387,7 +417,7 @@
     },
     "tauv": {
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "98def159da59eadb06b5cbf7a7af2946",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 17:46:33 2011",
@@ -397,20 +427,69 @@
         },
         "default": "ERAINT"
     },
+    "tos": {
+        "NOAA-OISST-v2": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "4995e86ecbe771751fcf542c96c84162",
+            "RefName": "NOAA-OISST-v2",
+            "RefTrackingDate": "Wed Jan 15 10:51:51 2014",
+            "filename": "tos_pcmdi-metrics_Omon_NOAA-OISST-v2_198202-201201-clim.nc",
+            "period": "198202-201201",
+            "shape": "(12, 180, 360)"
+        },
+        "NODC-WOA09": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "49a00ee3298d266f9234517d5c1c75d1",
+            "RefName": "NODC-WOA09",
+            "RefTrackingDate": "Wed Jan 15 10:53:00 2014",
+            "filename": "tos_pcmdi-metrics_Omon_NODC-WOA09_177201-200812-clim.nc",
+            "period": "177201-200812",
+            "shape": "(12, 180, 360)"
+        },
+        "REMSS-AMSRE-L3-v7": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "b849e0e2a90ba9424252639c3446b9b4",
+            "RefName": "REMSS-AMSRE-L3-v7",
+            "RefTrackingDate": "Wed Jan 15 10:54:18 2014",
+            "filename": "tos_pcmdi-metrics_Omon_REMSS-AMSRE-L3-v7_200301-201012-clim.nc",
+            "period": "200301-201012",
+            "shape": "(12, 180, 360)"
+        },
+        "UCSD-ARGO": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "a7b0e7fa23e56e915f0ba527427d2f07",
+            "RefName": "UCSD-ARGO",
+            "RefTrackingDate": "Wed Jan 15 10:55:42 2014",
+            "filename": "tos_pcmdi-metrics_Omon_UCSD-ARGO_200401-201212-clim.nc",
+            "period": "200401-201212",
+            "shape": "(12, 260, 720)"
+        },
+        "UKMETOFFICE-HadISST-v1-1": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "41833b403cad7052773dd933d1798a14",
+            "RefName": "UKMETOFFICE-HadISST-v1-1",
+            "RefTrackingDate": "Wed Jan 15 10:57:20 2014",
+            "filename": "tos_pcmdi-metrics_Omon_UKMETOFFICE-HadISST-v1-1_198002-200501-clim.nc",
+            "period": "198002-200501",
+            "shape": "(12, 180, 360)"
+        },
+        "default": "UKMETOFFICE-HadISST-v1-1"
+    },
     "ts": {
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "941ea2f75d02aa92dc3a58343063af21",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 17:27:47 2011",
             "filename": "ts_ERAINT_000001-000012_ac.nc",
             "period": "",
             "shape": "(12, 121, 240)"
-        }
+        },
+        "default": "ERAINT"
     },
     "ua": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "52fe5c4c5059a54597d3e72986c751d9",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 18:27:51 2011",
@@ -419,7 +498,7 @@
             "shape": "(12, 23, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "dca2dc9e8d2650a93cc8400775964cad",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 18:12:29 2011",
@@ -428,7 +507,7 @@
             "shape": "(12, 17, 121, 240)"
         },
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "8e69acc4c20ad87716b70e440ef008f9",
             "RefName": "JRA25",
             "RefTrackingDate": "Tue Jul 12 18:25:45 2011",
@@ -442,7 +521,7 @@
     },
     "uas": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "50ad1dc285fe61dbf398e4640a119c7d",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 18:09:35 2011",
@@ -451,7 +530,7 @@
             "shape": "(12, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "c4085df6de0ac8ad760a7b02f77e6083",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 18:09:50 2011",
@@ -460,7 +539,7 @@
             "shape": "(12, 121, 240)"
         },
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "f6918d6e96a42993fd7657efad64fa22",
             "RefName": "JRA25",
             "RefTrackingDate": "Tue Jul 12 18:09:19 2011",
@@ -474,7 +553,7 @@
     },
     "va": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "7adc89da5ad6031415d5aef9407990e4",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 17:13:02 2011",
@@ -483,7 +562,7 @@
             "shape": "(12, 23, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "c99d076d1ce415ee07b510c3f4983a9f",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 17:27:33 2011",
@@ -492,7 +571,7 @@
             "shape": "(12, 17, 121, 240)"
         },
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "2781c58ae5d22de6415b8bbbfecf2c83",
             "RefName": "JRA25",
             "RefTrackingDate": "Tue Jul 12 17:25:52 2011",
@@ -506,7 +585,7 @@
     },
     "vas": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "005f37ca8a51abd3e5ba63ec59a257fa",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 18:28:55 2011",
@@ -515,7 +594,7 @@
             "shape": "(12, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "4176326c9c9c710d9cf55011d5700441",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 18:28:15 2011",
@@ -524,7 +603,7 @@
             "shape": "(12, 121, 240)"
         },
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "8755e78f04b0ae406a987d233262a01c",
             "RefName": "JRA25",
             "RefTrackingDate": "Tue Jul 12 18:28:40 2011",
@@ -538,7 +617,7 @@
     },
     "zg": {
         "ERA40": {
-            "CMIP_CMOR_TABLE": "ERA40",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "c84cf70c32fec73b40717dfeb5eaacd0",
             "RefName": "ERA40",
             "RefTrackingDate": "Tue Jul 12 17:45:24 2011",
@@ -547,7 +626,7 @@
             "shape": "(12, 23, 73, 144)"
         },
         "ERAINT": {
-            "CMIP_CMOR_TABLE": "ERAINT",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "92728f47ce4e30701b73fdcc49a203b9",
             "RefName": "ERAINT",
             "RefTrackingDate": "Tue Jul 12 17:43:09 2011",
@@ -556,7 +635,7 @@
             "shape": "(12, 17, 121, 240)"
         },
         "JRA25": {
-            "CMIP_CMOR_TABLE": "JRA25",
+            "CMIP_CMOR_TABLE": "000001-000012",
             "MD5sum": "d05fe901617979ab0f54681ea181adbb",
             "RefName": "JRA25",
             "RefTrackingDate": "Tue Jul 12 17:41:32 2011",
@@ -567,5 +646,17 @@
         "alternate1": "ERA40",
         "alternate2": "JRA25",
         "default": "ERAINT"
+    },
+    "zos": {
+        "CNES-AVISO-L4": {
+            "CMIP_CMOR_TABLE": "Omon",
+            "MD5sum": "8835a061bb2ab4b154555f98d022b67b",
+            "RefName": "CNES-AVISO-L4",
+            "RefTrackingDate": "Wed Jan 15 11:01:14 2014",
+            "filename": "zos_pcmdi-metrics_Omon_CNES-AVISO-L4_199301-201012-clim.nc",
+            "period": "199301-201012",
+            "shape": "(12, 180, 360)"
+        },
+        "default": "CNES-AVISO-L4"
     }
 }
