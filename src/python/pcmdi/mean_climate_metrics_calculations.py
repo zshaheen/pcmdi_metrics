@@ -67,8 +67,9 @@ def compute_metrics(Var, dm, do):
     # CALCULATE MEAN ABSOLUTE ERROR
     mae_xy = pcmdi_metrics.pcmdi.meanabs_xy.compute(dm_am, do_am)
 
-    # CALCULATE ANNUAL MEAN RMS
+    # CALCULATE ANNUAL MEAN RMS AND CORRELATION
     rms_xy = pcmdi_metrics.pcmdi.rms_xy.compute(dm_am, do_am)
+    cor_xy = pcmdi_metrics.pcmdi.cor_xy.compute(dm_am, do_am)
 
     # CALCULATE ANNUAL OBS and MOD STD
     stdObs_xy = pcmdi_metrics.pcmdi.std_xy.compute(do_am)
@@ -133,6 +134,11 @@ def compute_metrics(Var, dm, do):
     metrics_dictionary[
         'rms_xy_ann'] = format(
         rms_xy *
+        conv,
+        sig_digits)
+    metrics_dictionary[
+        'cor_xy_ann'] = format(
+        cor_xy *
         conv,
         sig_digits)
     metrics_dictionary[
