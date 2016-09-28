@@ -34,27 +34,7 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name):
 
   ## Increase label text size ---
   my_template = vcs.createtemplate()
-
-  tick_text = vcs.createtext()
-  tick_text.height = 22
-  tick_text.valign = "half"
-  tick_text.halign = "center" 
-  my_template.xlabel1.textorientation = tick_text.To_name
-  my_template.xlabel1.texttable = tick_text.Tt_name
-
-  tick_text2 = vcs.createtext()
-  tick_text2.height = 22
-  tick_text2.valign = "half"
-  tick_text2.halign = "right" 
-  my_template.ylabel1.textorientation = tick_text2.To_name
-  my_template.ylabel1.texttable = tick_text2.Tt_name
-
-  tick_text3 = vcs.createtext()
-  tick_text3.height = 25
-  tick_text3.valign = "half"
-  tick_text3.halign = "center" 
-  my_template.legend.textorientation = tick_text3.To_name
-  my_template.legend.texttable = tick_text3.Tt_name
+  my_template = label_setup(my_template)
 
   ## EzTemplate ---
   M = EzTemplate.Multi(template=my_template, rows=2,columns=2)  
@@ -92,26 +72,23 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name):
   for i in range(4):  
     #t = M.get() # Use global colorbar
     t = M.get(legend='local') # Use local colorbar
-    #if i%2 !=1:  
-    #  t.legend.priority=0 # Turn off legend  
-    #  left_pos = t.data.x1
-    #else:
-    ##  # Set legend (colorbar) position
-    #  t.legend.x1 = left_pos
-    #  t.legend.x2 = t.data.x2
-    #  t.legend.y1 = t.legend.y1 - 0.03
-    #  t.legend.y2 = t.legend.y2 - 0.03
-    t.legend.y1 = t.legend.y1 - 0.03
-    t.legend.y2 = t.legend.y2 - 0.03
+    if i%2 !=1:  
+      t.legend.priority=0 # Turn off legend  
+      left_pos = t.data.x1
+    else:
+      # Set legend (colorbar) position
+      t.legend.x1 = left_pos
+      t.legend.x2 = t.data.x2
+      t.legend.y1 = t.legend.y1 - 0.03
+      t.legend.y2 = t.legend.y2 - 0.03
+    #t.legend.y1 = t.legend.y1 - 0.03
+    #t.legend.y2 = t.legend.y2 - 0.03
 
     t = setup_template(t)
 
-    #canvas.plot(s[i],t,iso)  
     if i < 2: 
-      #canvas.plot(s[i](**xtra), t, iso)
       canvas.plot(s[i], t, iso)
     else:
-      #canvas.plot(s[i](**xtra), t, iso_diff)
       canvas.plot(s[i], t, iso_diff)
 
     # Titles of subplots ---
@@ -159,8 +136,13 @@ def setup_iso(mode, iso, diff):
   ## Setup color ---
   if not diff: 
     iso.colormap = 'bl_to_darkred'
+    iso.colormap = 'default'
+    #iso.levels = [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5]
+    iso.levels = [   1,  2,    3,    4,    5, 6,   7,   8,   9,  10,  11, 12, 14, 16, 18, 20, 22 ]
   else:
     iso.colormap = 'bl_to_drkorang'
+    #iso.levels = [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10]
+    iso.levels = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     #iso.colormap = 'grn_to_magenta'
     #iso.colormap = 'bl_to_darkred'
 
@@ -197,3 +179,29 @@ def setup_iso(mode, iso, diff):
   #  xtra['latitude'] = (90.0,0.0) # For Northern Hemisphere
 
   return(iso, xtra)
+
+#===========================================================================================
+def label_setup(my_template):
+#-------------------------------------------------------------------------------------------
+  tick_text = vcs.createtext()
+  tick_text.height = 22
+  tick_text.valign = "half"
+  tick_text.halign = "center"
+  my_template.xlabel1.textorientation = tick_text.To_name
+  my_template.xlabel1.texttable = tick_text.Tt_name
+
+  tick_text2 = vcs.createtext()
+  tick_text2.height = 22
+  tick_text2.valign = "half"
+  tick_text2.halign = "right"
+  my_template.ylabel1.textorientation = tick_text2.To_name
+  my_template.ylabel1.texttable = tick_text2.Tt_name
+
+  tick_text3 = vcs.createtext()
+  tick_text3.height = 25
+  tick_text3.valign = "half"
+  tick_text3.halign = "center"
+  my_template.legend.textorientation = tick_text3.To_name
+  my_template.legend.texttable = tick_text3.Tt_name
+
+  return(my_template)
