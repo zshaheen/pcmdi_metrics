@@ -4,20 +4,64 @@ import numpy as NP
 import matplotlib.pyplot as PLT
 import json
 import sys, os
-import getopt
 import pcmdi_metrics
 from pcmdi_metrics.taylor_diagram_mpl import TaylorDiagram
+import argparse
+from argparse import RawTextHelpFormatter
+import sys
+import string
+
+
+P = argparse.ArgumentParser(
+    description='Runs PCMDI Metrics Computations',
+    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+P.add_argument("-j", "--json",
+                      type = str,
+                      dest = 'json',
+                      help = "Path to json file")
+P.add_argument("-v", "--variable",
+                      type = str,
+                      dest = 'var',
+                      help = "(Case Insensitive)")
+P.add_argument("-s", "--season",
+                      type = str,
+                      default = 'DJF',
+                      help = "Season for mode of variability\n"
+                             "- Available options: DJF (default), MAM, JJA, SON or all")
+P.add_argument("-e", "--experiment",
+                      type = str,
+                      dest = 'exp',
+                      default = 'historical',
+                      help = "AMIP, historical or picontrol")
+P.add_argument("-d", "--domain",
+                      type = str,
+                      dest = 'dom',
+                      default = 'global',
+                      help = "put options here")
+P.add_argument("-o", "--plotpath",
+                      type = str,
+                      dest = 'outpath',
+                      default = '',
+                      help = "")
+
+args = P.parse_args(sys.argv[1:])
+
+json_path = args.param
+var = args.var
+domain = 
+w = sys.stdin.readline()
 
 test = False  #True
 
-args=sys.argv[1:]
-letters='j:v:s:e:d:o:'
-keywords=['json=','var=','season=','exp=','domain=','plotpath=']
-json_path = 'default'
-season ='default'
-domain ='NHEX'
-var = 'default'
-pathout = './'
+#args=sys.argv[1:]
+#letters='j:v:s:e:d:o:'
+#keywords=['json=','var=','season=','exp=','domain=','plotpath=']
+#json_path = 'default'
+#season ='default'
+#domain ='NHEX'
+#var = 'default'
+#pathout = './'
 opts,pargs=getopt.getopt(args,letters,keywords)
 for o,p in opts:
     if o in ['-j','--json']:
@@ -66,13 +110,14 @@ source_ref = dd['RESULTS'][mods[0]]["defaultReference"]['source']
 
 for season in seasons:
     # Reference std from obs
-    stdrefs[season] = float(dd['RESULTS'][mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_'+dom])*unit_adj
+#   stdrefs[season] = float(dd['RESULTS'][mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season+'_'+dom])*unit_adj
+    stdrefs[season] = float(dd['RESULTS'][mods[0]]["defaultReference"]['r1i1p1']['global']['std-obs_xy_'+season])*unit_adj
 
     samples = {}
     all_mods = []
     for mod in mods:
-        cor = float(dd['RESULTS'][mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season+'_'+dom])
-        std = float(dd['RESULTS'][mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season+'_'+dom])*unit_adj
+        cor = float(dd['RESULTS'][mod]["defaultReference"]['r1i1p1']['global']['cor_xy_'+season])
+        std = float(dd['RESULTS'][mod]["defaultReference"]['r1i1p1']['global']['std_xy_'+season])*unit_adj
         all_mods.append([std,cor,str(mod)])
     samples[season] = all_mods
 
