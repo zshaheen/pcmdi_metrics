@@ -47,10 +47,14 @@ P.add_argument("-o", "--plotpath",
 
 args = P.parse_args(sys.argv[1:])
 
-json_path = args.param
+json_path = args.json
 var = args.var
-domain = 
-w = sys.stdin.readline()
+dom = args.dom
+exp = args.exp
+season = args.season
+pathout = args.outpath 
+
+#w = sys.stdin.readline()
 
 test = False  #True
 
@@ -62,20 +66,20 @@ test = False  #True
 #domain ='NHEX'
 #var = 'default'
 #pathout = './'
-opts,pargs=getopt.getopt(args,letters,keywords)
-for o,p in opts:
-    if o in ['-j','--json']:
-        json_path=p
-    if o in ['-v','--var']:
-        var = p
-    if o in ['-s','--season']: # djf / mam / jja / son / ann
-        season=p
-    if o in ['-o','--plotpath']:
-        pathout=p
-    if o in ['-e','--exp']:
-        exp=p
-    if o in ['-d','--domain']:
-        dom=p
+#opts,pargs=getopt.getopt(args,letters,keywords)
+#for o,p in opts:
+#   if o in ['-j','--json']:
+#       json_path=p
+#   if o in ['-v','--var']:
+#       var = p
+#   if o in ['-s','--season']: # djf / mam / jja / son / ann
+#       season=p
+#   if o in ['-o','--plotpath']:
+#       pathout=p
+#   if o in ['-e','--exp']:
+#       exp=p
+#   if o in ['-d','--domain']:
+#       dom=p
 
 print json_path,' ',season,' ', pathout,' ', exp,' ', var , ' ', dom
 print 'after args'
