@@ -58,28 +58,6 @@ pathout = args.outpath
 
 test = False  #True
 
-#args=sys.argv[1:]
-#letters='j:v:s:e:d:o:'
-#keywords=['json=','var=','season=','exp=','domain=','plotpath=']
-#json_path = 'default'
-#season ='default'
-#domain ='NHEX'
-#var = 'default'
-#pathout = './'
-#opts,pargs=getopt.getopt(args,letters,keywords)
-#for o,p in opts:
-#   if o in ['-j','--json']:
-#       json_path=p
-#   if o in ['-v','--var']:
-#       var = p
-#   if o in ['-s','--season']: # djf / mam / jja / son / ann
-#       season=p
-#   if o in ['-o','--plotpath']:
-#       pathout=p
-#   if o in ['-e','--exp']:
-#       exp=p
-#   if o in ['-d','--domain']:
-#       dom=p
 
 print json_path,' ',season,' ', pathout,' ', exp,' ', var , ' ', dom
 print 'after args'
