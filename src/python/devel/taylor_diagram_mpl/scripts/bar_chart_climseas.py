@@ -104,10 +104,11 @@ fig.suptitle((dom).upper() + ' ' + var.upper()+' ' + stat.upper() + ' (' + exp.u
 
 for season in seasons:
     all_mods = []
+    uni = dd['RESULTS'][mods[0]]['units']
     for mod in mods:
         bias = float(dd['RESULTS'][mod]["defaultReference"]['r1i1p1']['global'][stat +'_xy_'+season])*unit_adj
         all_mods.append(bias)
-    dia = BarChart(mods,all_mods,fig=fig, rect=rects[season])
+    dia = BarChart(mods,all_mods,uni, fig=fig, rect=rects[season])
     dia._ax.set_title(season.upper()) # Give title for individual subplot
     if season != seasons[-1]: # Hide x-axis labels for upper panels if plotting multiple panels
       dia._ax.axes.xaxis.set_ticklabels([])

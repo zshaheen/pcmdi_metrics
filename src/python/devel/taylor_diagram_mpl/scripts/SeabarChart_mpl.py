@@ -4,7 +4,7 @@ import sys
 
 class BarChart(object):
 
-  def __init__(self, mods, data, fig=None, rect=111):
+  def __init__(self, mods, data, uni, fig=None, rect=111):
 
     # Canvas setup
     if fig is None:
@@ -16,7 +16,7 @@ class BarChart(object):
 
     # Axis setup
     unit_adjust = 1.
-    unit = 'Unit needed here ...'
+    unit = uni   #'Unit needed here ...'
     ymax = max(data)
     ymin = min(data)
     yint = int((ymax-ymin)/3)
