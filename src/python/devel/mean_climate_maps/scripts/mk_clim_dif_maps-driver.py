@@ -11,6 +11,7 @@ era = 'cmip5'
 exp = 'historical'
 
 m = 'crunchy'
+m = 'oceanonly'
 
 if m == 'oceanonly':
  basedir = '/work/gleckler1/'
@@ -29,13 +30,14 @@ vars = ['pr']
 seasons = ['djf', 'mam', 'jja', 'son']
 
 # Load the obs dictionary
-#fjson = open(
-#        os.path.join(
-#            sys.prefix,
-#            "share",
-#            "pmp",
-#            "obs_info_dictionary.json"))
-fjson = open('/export_backup/lee1043/git/pcmdi_metrics/doc/obs_info_dictionary.json') ## FOR TEST -jwlee
+fjson = open(
+         os.path.join(
+             sys.prefix,
+             "share",
+             "pmp",
+             "obs_info_dictionary.json"))
+
+#fjson = open('/export_backup/lee1043/git/pcmdi_metrics/doc/obs_info_dictionary.json') ## FOR TEST -jwlee
 obs_dic = json.loads(fjson.read())
 fjson.close()
 

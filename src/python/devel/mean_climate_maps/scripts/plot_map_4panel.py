@@ -159,7 +159,7 @@ def setup_iso(mode, iso, diff):
   iso.missing = 'white'
 
   ## Map projection setup ---
-  #p = vcs.createprojection()
+  p = vcs.createprojection()
   #if mode == 'NAM' or mode == 'SAM':
   #  p.type = int('-3')
   #elif mode == 'NAO' or mode == 'PNA' or mode == 'PDO' or mode == 'AMO':
@@ -168,7 +168,11 @@ def setup_iso(mode, iso, diff):
   #  p.type = 'robinson'
   #else:
   #  p.type = int('-3')
-  #iso.projection = p
+  p.type = 'robinson'
+  p.type = 'mollweide'
+
+  iso.projection = p
+ 
 
   xtra = {}
   #if mode == 'PDO_teleconnection' or mode == 'PDO_pseudo_teleconnection':
