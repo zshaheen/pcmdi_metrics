@@ -6,28 +6,31 @@ import json
 import string
 import pcmdi_metrics
 import time
+from pcmdi_metrics.mean_climate_maps import plot_4panel
+import pmp_parser
 
-era = 'cmip5'
-exp = 'historical'
+parser = pmp_parser.PMPParser()
 
-m = 'crunchy'
-#m = 'oceanonly'
+parser.add_argument("--era",default="cmip5")
+parser.add_argument("--experiment",default="historical")
+parser.add_argument("--base-directory",default="/export_backup/gleckler1")
+parser.add_argument("--plots-output-directory",default="/work/gleckler1/processed_data/clim_plots")
+parser.add_argument("--model-directory",default="/work/gleckler1/processed_data/metrics_package/interpolated_model_clims_historical/global")
 
-if m == 'oceanonly':
- basedir = '/work/gleckler1/'
+parser.add_argument("--seasons",type=str,
+        nargs='+',
+        dest='seasons',
+        help='Seasons to use',
+        default=["djf","mam","jja","son"],
+        required=False)
+parser.add_argument("--debug",action="store_true",default=False)
 
-if m == 'crunchy':
- basedir = '/export_backup/gleckler1/'
-#basedir = '/work/lee1043/cdat/pmp/' ## FOR TEST -jwlee
+args = parser.parse_args(sys.argv[1:])
 
-plots_outdir = '/work/gleckler1/processed_data/clim_plots/'
-#plots_outdir = '/work/lee1043/cdat/pmp/clim_plots/' ## FOR TEST -jwlee
+variables = args.vars
+if variables==[]:
+  variables = ['pr','rlut']   #,'tas','rt']
 
-
-vars = ['pr','rlut']   #,'tas','rt']
-#vars = ['pr']
-
-seasons = ['djf', 'mam', 'jja', 'son']
 
 # Load the obs dictionary
 fjson = open(
@@ -37,39 +40,30 @@ fjson = open(
              "pmp",
              "obs_info_dictionary.json"))
 
-#fjson = open('/export_backup/lee1043/git/pcmdi_metrics/doc/obs_info_dictionary.json') ## FOR TEST -jwlee
 obs_dic = json.loads(fjson.read())
 fjson.close()
 
-#execfile('/export/gleckler1/git/pcmdi_metrics/src/python/pcmdi/seasonal_mean.py')
-execfile('./plot_map_4panel.py')
-
 # OBS path
-opathin = basedir + 'processed_data/obs/atm/mo/VAR/OBS/ac/VAR_OBS_000001-000012_ac.nc'
+opathin = os.path.join(args.base_directory,'processed_data','obs','atm','mo','VAR','OBS','ac','VAR_OBS_000001-000012_ac.nc')
 
 # MOD path
-mpathin = '/work/gleckler1/processed_data/metrics_package/interpolated_model_clims_historical/global/cmip5.MOD.historical.r1i1p1.mo.Amon.VAR.ver-1.1980-2005.interpolated.linear.2.5x2.5.global.AC.nc'
+mpathin = os.path.join(args.models_directory,'cmip5.MOD.historical.r1i1p1.mo.Amon.VAR.ver-1.1980-2005.interpolated.linear.2.5x2.5.global.AC.nc')
 
-po = plots_outdir
-subs = ['',era,exp]
-for sub in subs: 
-  po = po + '/' + sub
-  try:
-    os.mkdir(po)
-  except:
+try:
+    os.makedirs(os.path.join(args.plots_directory,args.era,args.experiment))
+except:
     pass
-import vcs
+
 canvas=vcs.init(geometry=(1000,800),bg=True)
 canvas.drawlogooff()
 
-for var in vars:
-
+for var in variables:
    #==============================================================================
    # Observation
    #------------------------------------------------------------------------------
    obsd = obs_dic[var]['default']
-   obst = string.replace(opathin,'VAR',var)
-   obst = string.replace(obst,'OBS',obsd)
+   obst = opathin.replace('VAR',var)
+   obst = obst.replace('OBS',obsd)
    fo = cdms2.open(obst)
    do = fo(var)
    ogrid = do.getGrid()
@@ -84,17 +78,12 @@ for var in vars:
    # Models
    #------------------------------------------------------------------------------
    # Get list of models
-   mods = []
-   mpatht = string.replace(mpathin,'MOD','*')
-   mpatht = string.replace(mpatht,'VAR',var)
-   lst = os.popen('ls ' + mpatht).readlines()
+   mods = set()
+   mpatht = mpathin.replace(mpathin,'MOD','*').replace(mpatht,'VAR',var)
+   lst = glob.glob(mpatht)
    for l in lst:
-     mod = string.split(l,'.')[1] 
-     if mod not in mods: mods.append(mod) 
-
-   # For test...
-#  mods = mods[0:3]
-   #mods = mods[0:1]
+     mod = l.split(l,'.')[1] 
+     mods.add(mod) 
 
    # Dictionary to save
    fld = {} # Model's climatology field
@@ -112,13 +101,11 @@ for var in vars:
      fld[mod] = {} # Model's climatology field
      dif[mod] = {} # Difference btw. model and obs
 
-     mpatht = string.replace(mpathin,'MOD',mod)
-     mpatht = string.replace(mpatht,'VAR',var)
+     mpatht = mpathin.replace(mpathin,'MOD',mod).replace(mpatht,'VAR',var)
 
      fm = cdms2.open(mpatht)
      dm = fm(var)
      fm.close()
-#    print mod
 
      for season in seasons:
 
@@ -149,13 +136,12 @@ for var in vars:
    #------------------------------------------------------------------------------
    # Create 4 panel plots: model, obs, model-obs, mmm-obs
    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-   pout = plots_outdir + '/' + era + '/' + exp + '/' + var
+   pout = os.path.join(args.plots_output_directory,args.era,args.experiment,var)
    try:
      os.mkdir(pout) 
    except:
      pass
 
-#  seasons = seasons[0:1] ## For test!!!
 
    for season in seasons:
      if var == 'pr' and do.units == 'kg m-2 s-1' and dm.units == 'kg m-2 s-1':
@@ -166,9 +152,7 @@ for var in vars:
        mmm_dif[season] = mmm_dif[season] * 86400.
        mmm_dif[season].units = 'mm d-1'
      for mod in mods:
-       go = pout + '/' + var +'.' + season + '.' + mod 
-       debug = True
-#      debug = None
+       go = os.path.join(pout,var+'.'+season+'.'+mod)
        if var == 'pr' and do.units == 'kg m-2 s-1' and dm.units == 'kg m-2 s-1':
          fld[mod][season] = fld[mod][season] * 86400.  
          fld[mod][season].units = 'mm d-1'
@@ -176,10 +160,8 @@ for var in vars:
          dif[mod][season].units = 'mm d-1'
 
        a = time.time()
-#      print var,' ', mod,' ', season,'  above plotting'
-       plot_4panel(debug, var, season, mod, fld[mod][season], obs[season], dif[mod][season], mmm_dif[season], go, canvas=canvas)
+       plot_4panel(args.debug, var, season, mod, fld[mod][season], obs[season], dif[mod][season], mmm_dif[season], go, canvas=canvas)
        b = time.time()
-
        print var,' ', mod,' ', season,'  plotting time is ', b-a
 
  

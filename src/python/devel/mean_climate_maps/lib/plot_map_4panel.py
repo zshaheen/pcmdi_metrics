@@ -1,8 +1,42 @@
+import EzTemplate, vcs  
+iso = vcs.createisofill()
+iso_diff = canvas.createisofill()
+## iso setup ---
+setup_iso(iso, diff=False)
+setup_iso(iso_diff, diff=True)
+my_template = vcs.createtemplate()
+## Increase label text size ---
+label_setup(my_template)
+## EzTemplate ---
+M = EzTemplate.Multi(template=my_template, rows=2,columns=2)  
+
+# Legend colorbar ---
+#M.legend.stretch = 1.5 # 150% of width (for middle one) --- in case use local legend
+#M.legend.stretch = 0.8 # 150% of width (for middle one) --- in case use global legend
+M.legend.thickness = 0.4 # Thickness of legend color bar
+M.legend.direction = 'horizontal' 
+#M.legend.direction = 'vertical' 
+
+# Border margin for entire canvas ---
+M.margins.top = .15
+M.margins.bottom = .10
+M.margins.left = .05  
+M.margins.right = .05  
+
+# Interval spacing between subplots ---
+M.spacing.horizontal = .05
+M.spacing.vertical = .10
 #===========================================================================================
+# Title on top ---
+plot_title = vcs.createtext()
+plot_title.x = .5
+plot_title.y = .97
+plot_title.height = 30
+plot_title.halign = 'center'
+plot_title.valign = 'top'
+plot_title.color = 'black'
 def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, canvas=None):
 #-------------------------------------------------------------------------------------------
-  import EzTemplate, vcs  
-  import string
 
   if debug is None:
     debug = True
@@ -24,45 +58,9 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, ca
 
   #canvas.setcolormap('bl_to_darkred')
 
-  ## iso setup ---
-  iso = canvas.createisofill()
-  iso, xtra = setup_iso(mode, iso, diff=False)
 
-  iso_diff = canvas.createisofill()
-  iso_diff, xtra = setup_iso(mode, iso_diff, diff=True)
 
-  ## Increase label text size ---
-  my_template = vcs.createtemplate()
-  my_template = label_setup(my_template)
 
-  ## EzTemplate ---
-  M = EzTemplate.Multi(template=my_template, rows=2,columns=2)  
-
-  # Legend colorbar ---
-  #M.legend.stretch = 1.5 # 150% of width (for middle one) --- in case use local legend
-  #M.legend.stretch = 0.8 # 150% of width (for middle one) --- in case use global legend
-  M.legend.thickness = 0.4 # Thickness of legend color bar
-  M.legend.direction = 'horizontal' 
-  #M.legend.direction = 'vertical' 
-
-  # Border margin for entire canvas ---
-  M.margins.top = .15
-  M.margins.bottom = .10
-  M.margins.left = .05  
-  M.margins.right = .05  
-
-  # Interval spacing between subplots ---
-  M.spacing.horizontal = .05
-  M.spacing.vertical = .10
-
-  # Title on top ---
-  plot_title = vcs.createtext()
-  plot_title.x = .5
-  plot_title.y = .97
-  plot_title.height = 30
-  plot_title.halign = 'center'
-  plot_title.valign = 'top'
-  plot_title.color = 'black'
   plot_title.string = mode + ': ' + season
   canvas.plot(plot_title)
 
@@ -83,7 +81,7 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, ca
     #t.legend.y1 = t.legend.y1 - 0.03
     #t.legend.y2 = t.legend.y2 - 0.03
 
-    t = setup_template(t)
+    setup_template(t)
 
     if i < 2: 
       canvas.plot(s[i], t, iso)
@@ -126,64 +124,32 @@ def setup_template(t):
   # Turn off no-needed information -- prevent overlap
   t.blank(['title','mean','min','max','dataname','crdate','crtime',
            'units','zvalue','tvalue','xunits','yunits','xname','yname'])
-  return(t)
+  return
 
 #===========================================================================================
-def setup_iso(mode, iso, diff):
+def setup_iso(iso, diff):
 #-------------------------------------------------------------------------------------------
-  import string
   import vcs
 
   ## Setup color ---
   if not diff: 
     iso.colormap = 'bl_to_darkred'
     iso.colormap = 'default'
-    #iso.levels = [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5]
     iso.levels = [   1,  2,    3,    4,    5, 6,   7,   8,   9,  10,  11, 12, 14, 16, 18, 20, 22 ]
   else:
     iso.colormap = 'bl_to_drkorang'
-    #iso.levels = [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10]
     iso.levels = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    #iso.colormap = 'grn_to_magenta'
-    #iso.colormap = 'bl_to_darkred'
 
-  #if string.split(mode,'_')[0] == 'PDO':
-  #  iso.levels = [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5]
-  #else:
-  #  iso.levels = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
   iso.ext_1 = 'y' # control colorbar edge (arrow extention on/off)
   iso.ext_2 = 'y' # control colorbar edge (arrow extention on/off)
-  #cols = vcs.getcolors(iso.levels)
-  #cols[6] = 139 # Adjsut to light red
-  #iso.fillareacolors = cols
-  #iso.missing = 0
   iso.missing = 'white'
 
   ## Map projection setup ---
   p = vcs.createprojection()
-  #if mode == 'NAM' or mode == 'SAM':
-  #  p.type = int('-3')
-  #elif mode == 'NAO' or mode == 'PNA' or mode == 'PDO' or mode == 'AMO':
-  #  p.type = 'lambert'
-  #elif mode == 'PDO_teleconnection' or mode == 'PDO_pseudo_teleconnection':
-  #  p.type = 'robinson'
-  #else:
-  #  p.type = int('-3')
-  p.type = 'robinson'
   p.type = 'mollweide'
 
   iso.projection = p
- 
-
-  xtra = {}
-  #if mode == 'PDO_teleconnection' or mode == 'PDO_pseudo_teleconnection':
-  #  xtra = {}
-  #elif mode == 'SAM' or mode == 'SAM_teleconnection' or mode == 'SAM_pseudo_teleconnection':
-  #  xtra['latitude'] = (-90.0,0.0) # For Southern Hemisphere
-  #else:
-  #  xtra['latitude'] = (90.0,0.0) # For Northern Hemisphere
-
-  return(iso, xtra)
+  return
 
 #===========================================================================================
 def label_setup(my_template):
@@ -209,4 +175,4 @@ def label_setup(my_template):
   my_template.legend.textorientation = tick_text3.To_name
   my_template.legend.texttable = tick_text3.Tt_name
 
-  return(my_template)
+  return
