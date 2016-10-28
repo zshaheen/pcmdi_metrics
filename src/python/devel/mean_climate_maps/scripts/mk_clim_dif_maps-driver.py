@@ -11,21 +11,21 @@ era = 'cmip5'
 exp = 'historical'
 
 m = 'crunchy'
-m = 'oceanonly'
+#m = 'oceanonly'
 
 if m == 'oceanonly':
  basedir = '/work/gleckler1/'
 
 if m == 'crunchy':
  basedir = '/export_backup/gleckler1/'
- basedir = '/work/lee1043/cdat/pmp/' ## FOR TEST -jwlee
+#basedir = '/work/lee1043/cdat/pmp/' ## FOR TEST -jwlee
 
-#plots_outdir = '/work/gleckler1/processed_data/clim_plots/'
-plots_outdir = '/work/lee1043/cdat/pmp/clim_plots/' ## FOR TEST -jwlee
+plots_outdir = '/work/gleckler1/processed_data/clim_plots/'
+#plots_outdir = '/work/lee1043/cdat/pmp/clim_plots/' ## FOR TEST -jwlee
 
 
-vars = ['pr','rlut','tas','rt']
-vars = ['pr']
+vars = ['pr','rlut']   #,'tas','rt']
+#vars = ['pr']
 
 seasons = ['djf', 'mam', 'jja', 'son']
 
@@ -58,6 +58,9 @@ for sub in subs:
     os.mkdir(po)
   except:
     pass
+import vcs
+canvas=vcs.init(geometry=(1000,800),bg=True)
+canvas.drawlogooff()
 
 for var in vars:
 
@@ -69,8 +72,8 @@ for var in vars:
    obst = string.replace(obst,'OBS',obsd)
    fo = cdms2.open(obst)
    do = fo(var)
-
    ogrid = do.getGrid()
+   fo.close()
 
    # Seasonal climatology of observation
    obs = {}
@@ -90,7 +93,7 @@ for var in vars:
      if mod not in mods: mods.append(mod) 
 
    # For test...
-   mods = mods[0:3]
+#  mods = mods[0:3]
    #mods = mods[0:1]
 
    # Dictionary to save
@@ -114,8 +117,8 @@ for var in vars:
 
      fm = cdms2.open(mpatht)
      dm = fm(var)
-
-     print mod
+     fm.close()
+#    print mod
 
      for season in seasons:
 
@@ -152,7 +155,7 @@ for var in vars:
    except:
      pass
 
-   seasons = seasons[0:1] ## For test!!!
+#  seasons = seasons[0:1] ## For test!!!
 
    for season in seasons:
      if var == 'pr' and do.units == 'kg m-2 s-1' and dm.units == 'kg m-2 s-1':
@@ -165,10 +168,21 @@ for var in vars:
      for mod in mods:
        go = pout + '/' + var +'.' + season + '.' + mod 
        debug = True
+#      debug = None
        if var == 'pr' and do.units == 'kg m-2 s-1' and dm.units == 'kg m-2 s-1':
          fld[mod][season] = fld[mod][season] * 86400.  
          fld[mod][season].units = 'mm d-1'
          dif[mod][season] = dif[mod][season] * 86400.  
          dif[mod][season].units = 'mm d-1'
 
-       plot_4panel(debug, var, season, mod, fld[mod][season], obs[season], dif[mod][season], mmm_dif[season], go)
+       a = time.time()
+#      print var,' ', mod,' ', season,'  above plotting'
+       plot_4panel(debug, var, season, mod, fld[mod][season], obs[season], dif[mod][season], mmm_dif[season], go, canvas=canvas)
+       b = time.time()
+
+       print var,' ', mod,' ', season,'  plotting time is ', b-a
+
+ 
+
+
+

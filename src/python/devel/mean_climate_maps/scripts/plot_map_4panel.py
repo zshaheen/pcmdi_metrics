@@ -1,5 +1,5 @@
 #===========================================================================================
-def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name):
+def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, canvas=None):
 #-------------------------------------------------------------------------------------------
   import EzTemplate, vcs  
   import string
@@ -7,6 +7,7 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name):
   if debug is None:
     debug = True
 
+  debug = False
   ## Input fields ---
   s = []
   s.append(s1)
@@ -15,14 +16,12 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name):
   s.append(s4)
 
   ## Initialize VCS ---
-  if debug:
-    canvas = vcs.init(geometry=(1000,800)) # Show canvas
-  if not debug:
-    canvas = vcs.init(geometry=(1000,800),bg=1) # Plotting in background mode
+  if canvas is None:
+	  if debug:
+	    canvas = vcs.init(geometry=(1000,800)) # Show canvas
+	  else:
+	    canvas = vcs.init(geometry=(1000,800),bg=1) # Plotting in background mode
 
-  ## Canvas setup ---
-  canvas.open()
-  canvas.drawlogooff()
   #canvas.setcolormap('bl_to_darkred')
 
   ## iso setup ---
@@ -116,8 +115,10 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name):
   #- - - - - - - - - - - - - - - - - - - - - - - - - 
   canvas.png(output_file_name+'.png')
 
-  if not debug:
-    canvas.close()
+# if not debug:
+# canvas.close()
+  canvas.clear()
+
 
 #===========================================================================================
 def setup_template(t):
