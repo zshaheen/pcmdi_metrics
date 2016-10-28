@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import vcs
 import cdms2
 import MV2
@@ -7,15 +8,16 @@ import string
 import pcmdi_metrics
 import time
 from pcmdi_metrics.mean_climate_maps import plot_4panel
-import pmp_parser
+from pcmdi_metrics.pcmdi import pmp_parser
+import glob
 
 parser = pmp_parser.PMPParser()
 
-parser.add_argument("--era",default="cmip5")
-parser.add_argument("--experiment",default="historical")
-parser.add_argument("--base-directory",default="/export_backup/gleckler1")
-parser.add_argument("--plots-output-directory",default="/work/gleckler1/processed_data/clim_plots")
-parser.add_argument("--model-directory",default="/work/gleckler1/processed_data/metrics_package/interpolated_model_clims_historical/global")
+parser.add_argument("--era",help="era",default="cmip5")
+parser.add_argument("--experiment",help="experiment",default="historical")
+parser.add_argument("--base-directory",help="base directory",default="/export_backup/gleckler1")
+parser.add_argument("--plots-output-directory",help="output directory for plots",default="/work/gleckler1/processed_data/clim_plots")
+parser.add_argument("--models-directory",help="models directory",default="/work/gleckler1/processed_data/metrics_package/interpolated_model_clims_historical/global")
 
 parser.add_argument("--seasons",type=str,
         nargs='+',
@@ -23,12 +25,11 @@ parser.add_argument("--seasons",type=str,
         help='Seasons to use',
         default=["djf","mam","jja","son"],
         required=False)
-parser.add_argument("--debug",action="store_true",default=False)
-
+parser.add_argument("--fg",help="plot in foreground",action="store_true",default=False)
 args = parser.parse_args(sys.argv[1:])
 
 variables = args.vars
-if variables==[]:
+if variables is None:
   variables = ['pr','rlut']   #,'tas','rt']
 
 
@@ -54,7 +55,7 @@ try:
 except:
     pass
 
-canvas=vcs.init(geometry=(1000,800),bg=True)
+canvas=vcs.init(geometry=(1000,800),bg=not args.fg)
 canvas.drawlogooff()
 
 for var in variables:
@@ -71,7 +72,7 @@ for var in variables:
 
    # Seasonal climatology of observation
    obs = {}
-   for season in seasons:
+   for season in args.seasons:
      obs[season] = pcmdi_metrics.pcmdi.seasonal_mean.compute(do,season)
 
    #==============================================================================
@@ -79,10 +80,10 @@ for var in variables:
    #------------------------------------------------------------------------------
    # Get list of models
    mods = set()
-   mpatht = mpathin.replace(mpathin,'MOD','*').replace(mpatht,'VAR',var)
+   mpatht = mpathin.replace('MOD','*').replace('VAR',var)
    lst = glob.glob(mpatht)
    for l in lst:
-     mod = l.split(l,'.')[1] 
+     mod = l.split('.')[1] 
      mods.add(mod) 
 
    # Dictionary to save
@@ -90,7 +91,7 @@ for var in variables:
    dif = {} # Difference btw. model and obs
    mmm = {} # Multi model ensemble
 
-   for season in seasons:
+   for season in args.seasons:
      mmm[season] = 0
 
    #------------------------------------------------------------------------------
@@ -101,13 +102,13 @@ for var in variables:
      fld[mod] = {} # Model's climatology field
      dif[mod] = {} # Difference btw. model and obs
 
-     mpatht = mpathin.replace(mpathin,'MOD',mod).replace(mpatht,'VAR',var)
+     mpatht = mpathin.replace('MOD',mod).replace('VAR',var)
 
      fm = cdms2.open(mpatht)
      dm = fm(var)
      fm.close()
 
-     for season in seasons:
+     for season in args.seasons:
 
        # Seasonal climatology
        fld[mod][season] = pcmdi_metrics.pcmdi.seasonal_mean.compute(dm,season)
@@ -126,7 +127,7 @@ for var in variables:
    # Get multi-model mean (MMM)
    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
    mmm_dif = {}
-   for season in seasons:
+   for season in args.seasons:
      mmm[season] = mmm[season]/float(len(mods))
 
      mmm_dif[season] = mmm[season] - obs[season] 
@@ -138,12 +139,12 @@ for var in variables:
    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
    pout = os.path.join(args.plots_output_directory,args.era,args.experiment,var)
    try:
-     os.mkdir(pout) 
-   except:
-     pass
+     os.makedirs(pout) 
+   except Exception,err:
+       pass
 
 
-   for season in seasons:
+   for season in args.seasons:
      if var == 'pr' and do.units == 'kg m-2 s-1' and dm.units == 'kg m-2 s-1':
        obs[season] = obs[season] * 86400.  
        obs[season].units = 'mm d-1'
@@ -160,7 +161,7 @@ for var in variables:
          dif[mod][season].units = 'mm d-1'
 
        a = time.time()
-       plot_4panel(args.debug, var, season, mod, fld[mod][season], obs[season], dif[mod][season], mmm_dif[season], go, canvas=canvas)
+       plot_4panel(not args.fg, var, season, mod, fld[mod][season], obs[season], dif[mod][season], mmm_dif[season], go, canvas=canvas)
        b = time.time()
        print var,' ', mod,' ', season,'  plotting time is ', b-a
 

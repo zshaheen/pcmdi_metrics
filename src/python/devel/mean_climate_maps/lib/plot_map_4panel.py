@@ -1,47 +1,9 @@
 import EzTemplate, vcs  
-iso = vcs.createisofill()
-iso_diff = canvas.createisofill()
-## iso setup ---
-setup_iso(iso, diff=False)
-setup_iso(iso_diff, diff=True)
-my_template = vcs.createtemplate()
-## Increase label text size ---
-label_setup(my_template)
-## EzTemplate ---
-M = EzTemplate.Multi(template=my_template, rows=2,columns=2)  
 
-# Legend colorbar ---
-#M.legend.stretch = 1.5 # 150% of width (for middle one) --- in case use local legend
-#M.legend.stretch = 0.8 # 150% of width (for middle one) --- in case use global legend
-M.legend.thickness = 0.4 # Thickness of legend color bar
-M.legend.direction = 'horizontal' 
-#M.legend.direction = 'vertical' 
 
-# Border margin for entire canvas ---
-M.margins.top = .15
-M.margins.bottom = .10
-M.margins.left = .05  
-M.margins.right = .05  
-
-# Interval spacing between subplots ---
-M.spacing.horizontal = .05
-M.spacing.vertical = .10
-#===========================================================================================
-# Title on top ---
-plot_title = vcs.createtext()
-plot_title.x = .5
-plot_title.y = .97
-plot_title.height = 30
-plot_title.halign = 'center'
-plot_title.valign = 'top'
-plot_title.color = 'black'
-def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, canvas=None):
+def plot_4panel(bg, mode, season, model, s1, s2, s3, s4, output_file_name, canvas=None):
 #-------------------------------------------------------------------------------------------
 
-  if debug is None:
-    debug = True
-
-  debug = False
   ## Input fields ---
   s = []
   s.append(s1)
@@ -51,10 +13,7 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, ca
 
   ## Initialize VCS ---
   if canvas is None:
-	  if debug:
-	    canvas = vcs.init(geometry=(1000,800)) # Show canvas
-	  else:
-	    canvas = vcs.init(geometry=(1000,800),bg=1) # Plotting in background mode
+	    canvas = vcs.init(geometry=(1000,800),bg=bg) # Plotting in background mode
 
   #canvas.setcolormap('bl_to_darkred')
 
@@ -67,8 +26,7 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, ca
   # Plot subplots ---
   left_pos = 0
   for i in range(4):  
-    #t = M.get() # Use global colorbar
-    t = M.get(legend='local') # Use local colorbar
+    t = M.get(legend='local',row=i/2,column=i%2,font=0) # Use local colorbar
     if i%2 !=1:  
       t.legend.priority=0 # Turn off legend  
       left_pos = t.data.x1
@@ -81,7 +39,7 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, ca
     #t.legend.y1 = t.legend.y1 - 0.03
     #t.legend.y2 = t.legend.y2 - 0.03
 
-    setup_template(t)
+    #setup_template(t)
 
     if i < 2: 
       canvas.plot(s[i], t, iso)
@@ -89,32 +47,29 @@ def plot_4panel(debug, mode, season, model, s1, s2, s3, s4, output_file_name, ca
       canvas.plot(s[i], t, iso_diff)
 
     # Titles of subplots ---
-    plot_title.height = 20
+    plot_sub.height = 20
     if i == 0: 
-      plot_title.string = model # multi-realization mean...
-      plot_title.x = .27
-      plot_title.y = .91
+      plot_sub.string = model # multi-realization mean...
+      plot_sub.x = .27
+      plot_sub.y = .91
     elif i == 1: 
-      plot_title.string = 'OBS'
-      plot_title.x = .73
-      plot_title.y = .91
+      plot_sub.string = 'OBS'
+      plot_sub.x = .73
+      plot_sub.y = .91
     elif i == 2: 
-      plot_title.string = 'Diff: '+model+' - OBS'
-      plot_title.x = .27
-      plot_title.y = .48
+      plot_sub.string = 'Diff: '+model+' - OBS'
+      plot_sub.x = .27
+      plot_sub.y = .48
     elif i == 3: 
-      plot_title.string = 'Diff: MMM - OBS'
-      plot_title.x = .73
-      plot_title.y = .48
-    canvas.plot(plot_title)
+      plot_sub.string = 'Diff: MMM - OBS'
+      plot_sub.x = .73
+      plot_sub.y = .48
+    canvas.plot(plot_sub)
    
   #-------------------------------------------------
   # Drop output as image file (--- vector image?)
   #- - - - - - - - - - - - - - - - - - - - - - - - - 
   canvas.png(output_file_name+'.png')
-
-# if not debug:
-# canvas.close()
   canvas.clear()
 
 
@@ -124,6 +79,7 @@ def setup_template(t):
   # Turn off no-needed information -- prevent overlap
   t.blank(['title','mean','min','max','dataname','crdate','crtime',
            'units','zvalue','tvalue','xunits','yunits','xname','yname'])
+  t.scalefont(.75)
   return
 
 #===========================================================================================
@@ -174,5 +130,45 @@ def label_setup(my_template):
   tick_text3.halign = "center"
   my_template.legend.textorientation = tick_text3.To_name
   my_template.legend.texttable = tick_text3.Tt_name
-
   return
+
+
+iso = vcs.createisofill()
+iso_diff = vcs.createisofill()
+## iso setup ---
+setup_iso(iso, diff=False)
+setup_iso(iso_diff, diff=True)
+my_template = vcs.createtemplate()
+## Increase label text size ---
+label_setup(my_template)
+setup_template(my_template)
+## EzTemplate ---
+M = EzTemplate.Multi(template=my_template, rows=2,columns=2)  
+
+# Legend colorbar ---
+#M.legend.stretch = 1.5 # 150% of width (for middle one) --- in case use local legend
+#M.legend.stretch = 0.8 # 150% of width (for middle one) --- in case use global legend
+M.legend.thickness = 0.4 # Thickness of legend color bar
+M.legend.direction = 'horizontal' 
+#M.legend.direction = 'vertical' 
+
+# Border margin for entire canvas ---
+M.margins.top = .15
+M.margins.bottom = .10
+M.margins.left = .05  
+M.margins.right = .05  
+
+# Interval spacing between subplots ---
+M.spacing.horizontal = .05
+M.spacing.vertical = .10
+#===========================================================================================
+# Title on top ---
+plot_title = vcs.createtext()
+plot_title.x = .5
+plot_title.y = .97
+plot_title.height = 30
+plot_title.halign = 'center'
+plot_title.valign = 'top'
+plot_title.color = 'black'
+
+plot_sub = vcs.createtext(Tt_source=plot_title.Tt_name,To_source=plot_title.To_name)

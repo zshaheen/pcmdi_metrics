@@ -12,6 +12,8 @@ class PMPParameter(cdp.cdp_parameter.CDPParameter):
 
 class PMPParser(argparse.ArgumentParser):
     def __init__(self, *args, **kwargs):
+        if not kwargs.has_key("formatter_class"):
+            kwargs["formatter_class"]=argparse.ArgumentDefaultsHelpFormatter
         # conflict_handler='resolve' lets new args override older ones
         super(PMPParser, self).__init__(conflict_handler='resolve',
                                         *args, **kwargs)
