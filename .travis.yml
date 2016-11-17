@@ -23,4 +23,8 @@ install:
 
 script:
     - export HDF5_DISABLE_VERSION_CHECK=1
+    - df -h /tmp
+    - ls -l /
+    - ls -l /tmp
+    - python -c "from cdms2 import cdscan"
     - python test/test_suite.py # --no-graphics
