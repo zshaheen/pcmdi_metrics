@@ -1,0 +1,891 @@
+(pcmdi_metrics) zshaheen@zshaheen-VirtualBox:~/github/pcmdi_metrics$ python test/test_suite.py 
+ERROR import vcs, skipping graphics test (test_portrait)...
+ERROR import vcs, skipping graphics test (test_pcoord)...
+.
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/basic_test_parameters_file.py
+---------------------------------------------------
+
+
+
+
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/cdms2/avariable.py:1087: Warning: 
+avariable.regrid: regridTool = 'esmf' but your version does not seems to be built with esmf, will switch to regridTool = 'libcf'
+                  
+  warnings.warn(message, Warning)
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/regrid2/gsRegrid.py:608: UserWarning: mismatch in src and dst data types (float64 vs float32) we recasted src to dst
+  % (src_data.dtype, dst_data.dtype))
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/numpy/ma/core.py:1006: RuntimeWarning: overflow encountered in multiply
+  result = self.f(da, db, *args, **kwargs)
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/terre/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/terre/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/ocean/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/ocean/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83ac25fdd0> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.json', '/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tas_2.5x2.5_regrid2_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/installationTest/tos_2.5x2.5_esmf_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/installationTest/tos_2.5x2.5_esmf_linear_metrics.json
+Failing line: -                            "son": "299.082", (we read: 299.098 )
+Failing line: -                            "jja": "299.080", (we read: 299.094 )
+Failing line: -                            "ann": "1.267" (we read: 1.24 )
+Failing line: -                            "ann": "-1.284", (we read: -1.295 )
+Failing line: -                            "son": "-1.538", (we read: -1.551 )
+Failing line: -                            "jja": "-1.054", (we read: -1.066 )
+Failing line: -                            "ann": "284.146", (we read: 284.113 )
+Failing line: -                            "son": "286.170", (we read: 286.139 )
+Failing line: -                            "mam": "281.775", (we read: 281.741 )
+Failing line: -                            "jja": "286.827", (we read: 286.792 )
+Failing line: -                            "djf": "281.842" (we read: 281.81 )
+Failing line: -                            "son": "284.606", (we read: 284.592 )
+Failing line: -                            "djf": "280.528" (we read: 280.5 )
+Failing line: -                            "ann": "1.541" (we read: 1.5 )
+Failing line: -                            "ann": "282.226", (we read: 282.239 )
+Failing line: -                            "djf": "283.628" (we read: 283.64 )
+Failing line: -                            "ann": "1.402" (we read: 1.38 )
+E
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/units_test.py
+---------------------------------------------------
+
+
+
+
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/cdms2/avariable.py:1087: Warning: 
+avariable.regrid: regridTool = 'esmf' but your version does not seems to be built with esmf, will switch to regridTool = 'libcf'
+                  
+  warnings.warn(message, Warning)
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.txt
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83b015ff50> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/unitsTest/tas_2.5x2.5_esmf_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/unitsTest/tas_2.5x2.5_esmf_linear_metrics.json
+Failing line: -                            "jja": "4.108", (we read: 4.121 )
+Failing line: -                            "ann": "2.118" (we read: 2.09 )
+Failing line: -                            "djf": "16.057" (we read: 16.03 )
+Failing line: -                            "ann": "276.139", (we read: 276.174 )
+Failing line: -                            "son": "277.423", (we read: 277.455 )
+Failing line: -                            "mam": "274.581", (we read: 274.614 )
+Failing line: -                            "djf": "265.774" (we read: 265.83 )
+Failing line: -                            "ann": "2.760" (we read: 2.72 )
+Failing line: -                            "son": "11.423", (we read: 11.412 )
+Failing line: -                            "ann": "4.618" (we read: 4.63 )
+Failing line: -                            "ann": "14.471" (we read: 14.45 )
+Failing line: -                            "ann": "277.696", (we read: 277.683 )
+Failing line: -                            "son": "275.873", (we read: 275.857 )
+Failing line: -                            "ann": "2.151" (we read: 2.13 )
+F
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/nosftlf_test.py
+---------------------------------------------------
+
+
+
+
+CDMS system error: No such file or directory
+CDMS I/O error: Opening file /home/zshaheen/github/pcmdi_metrics/test/pcmdi/data/sftflf_not_here_GFDL-ESM2G.nc
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/cdms2/avariable.py:1087: Warning: 
+avariable.regrid: regridTool = 'esmf' but your version does not seems to be built with esmf, will switch to regridTool = 'libcf'
+                  
+  warnings.warn(message, Warning)
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Model GFDL-ESM2G does not have sftlf, skipping region: {'id': 'land', 'value': 100}
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Model GFDL-ESM2G does not have sftlf, skipping region: {'id': 'ocean', 'value': 0}
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83a7943dd0> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/nosftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+Failing line: -                            "jja": "4.108", (we read: 4.121 )
+Failing line: -                            "ann": "2.118" (we read: 2.09 )
+Failing line: -                            "djf": "16.057" (we read: 16.03 )
+Failing line: -                            "ann": "276.139", (we read: 276.174 )
+Failing line: -                            "son": "277.423", (we read: 277.455 )
+Failing line: -                            "mam": "274.581", (we read: 274.614 )
+Failing line: -                            "djf": "265.774" (we read: 265.83 )
+Failing line: -                            "ann": "2.760" (we read: 2.72 )
+Failing line: -                            "son": "11.423", (we read: 11.412 )
+Failing line: -                            "ann": "4.618" (we read: 4.63 )
+Failing line: -                            "ann": "14.471" (we read: 14.45 )
+Failing line: -                            "ann": "277.696", (we read: 277.683 )
+Failing line: -                            "son": "275.873", (we read: 275.857 )
+Failing line: -                            "ann": "2.151" (we read: 2.13 )
+E
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/gensftlf_test.py
+---------------------------------------------------
+
+
+
+
+CDMS system error: No such file or directory
+CDMS I/O error: Opening file /home/zshaheen/github/pcmdi_metrics/test/pcmdi/data/sftflf_not_here_GFDL-ESM2G.nc
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/cdms2/avariable.py:1087: Warning: 
+avariable.regrid: regridTool = 'esmf' but your version does not seems to be built with esmf, will switch to regridTool = 'libcf'
+                  
+  warnings.warn(message, Warning)
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/climos/TROPICS/___piControl__-clim.nc
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/climos/TROPICS/tas_GFDL-ESM2G_Amon_piControl_000101-010012_TROPICS-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/climos/SHEX/___piControl__-clim.nc
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/climos/SHEX/tas_GFDL-ESM2G_Amon_piControl_000101-010012_SHEX-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/climos/NHEX/___piControl__-clim.nc
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/climos/NHEX/tas_GFDL-ESM2G_Amon_piControl_000101-010012_NHEX-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/climos/global/___piControl__-clim.nc
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/climos/global/tas_GFDL-ESM2G_Amon_piControl_000101-010012_global-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Auto generating sftlf for model /home/zshaheen/github/pcmdi_metrics/test/pcmdi/data/tas_GFDL-ESM2G_Amon_piControl_000101-010012-clim01.xml
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/numpy/ma/core.py:3337: MaskedArrayFutureWarning: setting an item on a masked array which has a shared mask will not copy the mask and also change the original mask array in the future.
+Check the NumPy 1.11 release notes for more information.
+  self.__setitem__(slice(i, j), value)
+INFO:root:Auto generated sftlf for model GFDL-ESM2G
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/cdms2/avariable.py:1117: Warning: 
+avariable.regrid: We chose regridMethod = linear for you among the following choices: 
+    'conserve' or 'linear' or 'patch'
+  warnings.warn(message, Warning)
+Traceback (most recent call last):
+  File "/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/logging/__init__.py", line 861, in emit
+    msg = self.format(record)
+  File "/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/logging/__init__.py", line 734, in format
+    return fmt.format(record)
+  File "/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/logging/__init__.py", line 465, in format
+    record.message = record.getMessage()
+  File "/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/logging/__init__.py", line 329, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Logged from file observation.py, line 127
+Traceback (most recent call last):
+  File "/home/zshaheen/anaconda2/envs/pcmdi_metrics/bin/pcmdi_metrics_driver.py", line 199, in <module>
+    driver.run_diags()
+  File "/home/zshaheen/anaconda2/envs/pcmdi_metrics/bin/pcmdi_metrics_driver.py", line 51, in run_diags
+    self.run_reference_and_test_comparison()
+  File "/home/zshaheen/anaconda2/envs/pcmdi_metrics/bin/pcmdi_metrics_driver.py", line 166, in run_reference_and_test_comparison
+    self.output_metric.calculate_and_output_metrics(ref, tst)
+  File "/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/pcmdi_metrics/driver/outputmetrics.py", line 117, in calculate_and_output_metrics
+    if ref_data.shape != test_data.shape:
+AttributeError: 'NoneType' object has no attribute 'shape'
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83a7943dd0> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/gensftlfTest/tas_2.5x2.5_esmf_linear_metrics.json
+Failing line: -                            "son": "-0.852", (we read: -0.87 )
+Failing line: -                            "mam": "-0.950", (we read: -0.873 )
+Failing line: -                            "jja": "-0.976", (we read: -0.803 )
+Failing line: -                            "djf": "-0.532" (we read: -1.06 )
+Failing line: -                            "son": "0.99", (we read: -0.87 )
+Failing line: -                            "mam": "0.99", (we read: -0.873 )
+Failing line: -                            "jja": "0.99", (we read: -0.803 )
+Failing line: -                            "djf": "0.99" (we read: -1.06 )
+Failing line: -                            "son": "2.096", (we read: -0.87 )
+Failing line: -                            "mam": "2.309", (we read: -0.873 )
+Failing line: -                            "jja": "2.091", (we read: -0.803 )
+Failing line: -                            "djf": "2.039" (we read: -1.06 )
+Failing line: -                            "son": "283.031", (we read: -0.87 )
+Failing line: -                            "mam": "282.354", (we read: -0.873 )
+Failing line: -                            "jja": "287.896", (we read: -0.803 )
+Failing line: -                            "djf": "277.043" (we read: -1.06 )
+Failing line: -                            "son": "281.522", (we read: -0.87 )
+Failing line: -                            "mam": "280.923", (we read: -0.873 )
+Failing line: -                            "jja": "286.490", (we read: -0.803 )
+Failing line: -                            "djf": "275.709" (we read: -1.06 )
+Failing line: -                            "ann": "1.975" (we read: 1.16 )
+Failing line: -                            "ann": "2.341", (we read: 1.16 )
+Failing line: -                            "son": "2.662", (we read: -0.87 )
+Failing line: -                            "mam": "2.963", (we read: -0.873 )
+Failing line: -                            "jja": "2.637", (we read: -0.803 )
+Failing line: -                            "djf": "2.595" (we read: -1.06 )
+Failing line: -                            "ann": "2.872" (we read: 1.16 )
+Failing line: -                            "ann": "1.933" (we read: 1.16 )
+Failing line: -                            "ann": "2.185", (we read: 1.16 )
+Failing line: -                            "son": "2.522", (we read: -0.87 )
+Failing line: -                            "mam": "2.807", (we read: -0.873 )
+Failing line: -                            "jja": "2.450", (we read: -0.803 )
+Failing line: -                            "djf": "2.540" (we read: -1.06 )
+Failing line: -                            "ann": "18.295", (we read: 1.16 )
+Failing line: -                            "son": "18.480", (we read: -0.87 )
+Failing line: -                            "mam": "19.809", (we read: -0.873 )
+Failing line: -                            "jja": "19.454", (we read: -0.803 )
+Failing line: -                            "djf": "20.051" (we read: -1.06 )
+Failing line: -                            "ann": "4.890" (we read: 1.16 )
+Failing line: -                            "ann": "20.146" (we read: 1.16 )
+Failing line: -                            "ann": "18.460", (we read: 1.16 )
+Failing line: -                            "son": "19.302", (we read: -0.87 )
+Failing line: -                            "mam": "19.501", (we read: -0.873 )
+Failing line: -                            "jja": "20.060", (we read: -0.803 )
+Failing line: -                            "djf": "19.585" (we read: -1.06 )
+Failing line: -                            "ann": "5.090" (we read: 1.16 )
+Failing line: -                            "ann": "20.284" (we read: 1.16 )
+Failing line: -                            "jja": "4.108", (we read: 4.121 )
+Failing line: -                            "ann": "2.118" (we read: 2.09 )
+Failing line: -                            "djf": "16.057" (we read: 16.03 )
+Failing line: -                            "ann": "-0.436", (we read: 14.8 )
+Failing line: -                            "son": "-0.657", (we read: -2.239 )
+Failing line: -                            "mam": "-0.281", (we read: -2.229 )
+Failing line: -                            "jja": "-0.369", (we read: -1.565 )
+Failing line: -                            "djf": "-0.434" (we read: -2.53 )
+Failing line: -                            "ann": "0.985", (we read: 14.8 )
+Failing line: -                            "son": "0.99", (we read: -2.239 )
+Failing line: -                            "mam": "0.98", (we read: -2.229 )
+Failing line: -                            "jja": "0.99", (we read: -1.565 )
+Failing line: -                            "djf": "0.97" (we read: -2.53 )
+Failing line: -                            "ann": "1.519", (we read: 14.8 )
+Failing line: -                            "son": "1.524", (we read: -2.239 )
+Failing line: -                            "mam": "1.602", (we read: -2.229 )
+Failing line: -                            "jja": "1.332", (we read: -1.565 )
+Failing line: -                            "djf": "1.828" (we read: -2.53 )
+Failing line: -                            "ann": "290.002", (we read: 14.8 )
+Failing line: -                            "son": "289.690", (we read: -2.239 )
+Failing line: -                            "mam": "290.254", (we read: -2.229 )
+Failing line: -                            "jja": "289.841", (we read: -1.565 )
+Failing line: -                            "djf": "290.228" (we read: -2.53 )
+Failing line: -                            "ann": "289.251", (we read: 14.8 )
+Failing line: -                            "son": "288.865", (we read: -2.239 )
+Failing line: -                            "mam": "289.551", (we read: -2.229 )
+Failing line: -                            "jja": "289.441", (we read: -1.565 )
+Failing line: -                            "djf": "289.155" (we read: -2.53 )
+Failing line: -                            "ann": "0.885" (we read: 14.8 )
+Failing line: -                            "ann": "1.924", (we read: 14.8 )
+Failing line: -                            "son": "1.889", (we read: -2.239 )
+Failing line: -                            "mam": "2.148", (we read: -2.229 )
+Failing line: -                            "jja": "1.704", (we read: -1.565 )
+Failing line: -                            "djf": "2.530" (we read: -2.53 )
+Failing line: -                            "ann": "2.149" (we read: 14.8 )
+Failing line: -                            "ann": "3.422" (we read: 14.8 )
+Failing line: -                            "ann": "1.874", (we read: 14.8 )
+Failing line: -                            "son": "1.771", (we read: -2.239 )
+Failing line: -                            "mam": "2.129", (we read: -2.229 )
+Failing line: -                            "jja": "1.664", (we read: -1.565 )
+Failing line: -                            "djf": "2.492" (we read: -2.53 )
+Failing line: -                            "ann": "10.492", (we read: 14.8 )
+Failing line: -                            "son": "10.750", (we read: -2.239 )
+Failing line: -                            "mam": "10.726", (we read: -2.229 )
+Failing line: -                            "jja": "10.733", (we read: -1.565 )
+Failing line: -                            "djf": "10.742" (we read: -2.53 )
+Failing line: -                            "ann": "1.804" (we read: 14.8 )
+Failing line: -                            "ann": "10.802" (we read: 14.8 )
+Failing line: -                            "ann": "10.681", (we read: 14.8 )
+Failing line: -                            "son": "10.872", (we read: -2.239 )
+Failing line: -                            "mam": "11.113", (we read: -2.229 )
+Failing line: -                            "jja": "10.343", (we read: -1.565 )
+Failing line: -                            "djf": "12.118" (we read: -2.53 )
+Failing line: -                            "ann": "1.802" (we read: 14.8 )
+Failing line: -                            "ann": "11.241" (we read: 14.8 )
+Failing line: -                            "ann": "276.139", (we read: 276.174 )
+Failing line: -                            "son": "277.423", (we read: 277.455 )
+Failing line: -                            "mam": "274.581", (we read: 274.614 )
+Failing line: -                            "djf": "265.774" (we read: 265.83 )
+Failing line: -                            "ann": "2.760" (we read: 2.72 )
+Failing line: -                            "son": "11.423", (we read: 11.412 )
+Failing line: -                            "ann": "4.618" (we read: 4.63 )
+Failing line: -                            "ann": "14.471" (we read: 14.45 )
+Failing line: -                            "ann": "277.696", (we read: 277.683 )
+Failing line: -                            "son": "275.873", (we read: 275.857 )
+Failing line: -                            "ann": "2.151" (we read: 2.13 )
+E
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/keep_going_on_error_varname_test.py
+---------------------------------------------------
+
+
+
+
+CDMS system error: No such file or directory
+CDMS I/O error: Opening file /home/zshaheen/github/pcmdi_metrics/test/pcmdi/data/_GFDL-ESM2G_fx_historical_r0i0p0_198501-200512-clim.nc
+ERROR:root:Variable aVarThatIsNot not in obs_dict
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/cdms2/avariable.py:1087: Warning: 
+avariable.regrid: regridTool = 'esmf' but your version does not seems to be built with esmf, will switch to regridTool = 'libcf'
+                  
+  warnings.warn(message, Warning)
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/regrid2/gsRegrid.py:608: UserWarning: mismatch in src and dst data types (float64 vs float32) we recasted src to dst
+  % (src_data.dtype, dst_data.dtype))
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/numpy/ma/core.py:1006: RuntimeWarning: overflow encountered in multiply
+  result = self.f(da, db, *args, **kwargs)
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Model GFDL-ESM2G does not have sftlf, skipping region: {'id': 'terre', 'value': 100.0}
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Model GFDL-ESM2G does not have sftlf, skipping region: {'id': 'ocean', 'value': 0}
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.txt
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83b0be33d0> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/keep_going_on_error_varnameTest/tos_2.5x2.5_esmf_linear_metrics.json
+Failing line: -                            "son": "299.082", (we read: 299.098 )
+Failing line: -                            "jja": "299.080", (we read: 299.094 )
+Failing line: -                            "ann": "1.267" (we read: 1.24 )
+Failing line: -                            "ann": "-1.284", (we read: -1.295 )
+Failing line: -                            "son": "-1.538", (we read: -1.551 )
+Failing line: -                            "jja": "-1.054", (we read: -1.066 )
+Failing line: -                            "ann": "284.146", (we read: 284.113 )
+Failing line: -                            "son": "286.170", (we read: 286.139 )
+Failing line: -                            "mam": "281.775", (we read: 281.741 )
+Failing line: -                            "jja": "286.827", (we read: 286.792 )
+Failing line: -                            "djf": "281.842" (we read: 281.81 )
+Failing line: -                            "son": "284.606", (we read: 284.592 )
+Failing line: -                            "djf": "280.528" (we read: 280.5 )
+Failing line: -                            "ann": "1.541" (we read: 1.5 )
+Failing line: -                            "ann": "282.226", (we read: 282.239 )
+Failing line: -                            "djf": "283.628" (we read: 283.64 )
+Failing line: -                            "ann": "1.402" (we read: 1.38 )
+E
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/obs_by_name_test.py
+---------------------------------------------------
+
+
+
+
+INFO:root:ERAINT is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:ERAINT is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:ERAINT is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:ERAINT is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:ERAINT is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/numpy/ma/core.py:1006: RuntimeWarning: overflow encountered in multiply
+  result = self.f(da, db, *args, **kwargs)
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.txt
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83a7943dd0> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/obsByNameTest/tas_2.5x2.5_regrid2_linear_metrics.json
+.
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/salinity_test.py
+---------------------------------------------------
+
+
+
+
+CDMS system error: No such file or directory
+CDMS I/O error: Opening file /home/zshaheen/github/pcmdi_metrics/test/pcmdi/data/_GFDL-CM3_fx_historical_000101-010012-clim.nc
+INFO:root:JPL-Aquarius-v2 is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-CM3 is a model
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/cdms2/avariable.py:1087: Warning: 
+avariable.regrid: regridTool = 'esmf' but your version does not seems to be built with esmf, will switch to regridTool = 'libcf'
+                  
+  warnings.warn(message, Warning)
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/regrid2/gsRegrid.py:608: UserWarning: mismatch in src and dst data types (float64 vs float32) we recasted src to dst
+  % (src_data.dtype, dst_data.dtype))
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/numpy/ma/core.py:1006: RuntimeWarning: overflow encountered in multiply
+  result = self.f(da, db, *args, **kwargs)
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:JPL-Aquarius-v2 is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-CM3 is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:JPL-Aquarius-v2 is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-CM3 is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:JPL-Aquarius-v2 is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-CM3 is a model
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.txt
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83a7943dd0> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/salinityTest/sos_2.5x2.5_esmf_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/salinityTest/sos_2.5x2.5_esmf_linear_metrics.json
+Failing line: -                            "ann": "1.669" (we read: 1.64 )
+Failing line: -                            "son": "0.059", (we read: 0.045 )
+Failing line: -                            "son": "0.459", (we read: 0.475 )
+Failing line: -                            "ann": "33.636", (we read: 33.623 )
+Failing line: -                            "son": "34.316", (we read: 34.29 )
+Failing line: -                            "mam": "34.456", (we read: 34.433 )
+Failing line: -                            "jja": "34.380", (we read: 34.359 )
+Failing line: -                            "djf": "34.235" (we read: 34.21 )
+Failing line: -                            "son": "0.675", (we read: 0.734 )
+Failing line: -                            "mam": "0.580", (we read: 0.601 )
+Failing line: -                            "djf": "0.879" (we read: 0.89 )
+Failing line: -                            "son": "0.672", (we read: 0.732 )
+Failing line: -                            "mam": "0.571", (we read: 0.594 )
+Failing line: -                            "djf": "0.821" (we read: 0.84 )
+Failing line: -                            "son": "1.474", (we read: 1.485 )
+Failing line: -                            "ann": "0.890", (we read: 0.906 )
+Failing line: -                            "djf": "0.598" (we read: 0.61 )
+Failing line: -                            "ann": "1.974" (we read: 1.9 )
+Failing line: -                            "ann": "0.881", (we read: 0.897 )
+Failing line: -                            "ann": "1.131", (we read: 1.145 )
+Failing line: -                            "djf": "0.889" (we read: 0.9 )
+F
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/region_specs_test.py
+---------------------------------------------------
+
+
+
+
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/cdms2/avariable.py:1087: Warning: 
+avariable.regrid: regridTool = 'esmf' but your version does not seems to be built with esmf, will switch to regridTool = 'libcf'
+                  
+  warnings.warn(message, Warning)
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/regrid2/gsRegrid.py:608: UserWarning: mismatch in src and dst data types (float64 vs float32) we recasted src to dst
+  % (src_data.dtype, dst_data.dtype))
+/home/zshaheen/anaconda2/envs/pcmdi_metrics/lib/python2.7/site-packages/numpy/ma/core.py:1006: RuntimeWarning: overflow encountered in multiply
+  result = self.f(da, db, *args, **kwargs)
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/tos_GFDL-ESM2G_Omon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/TROPICS/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/SHEX/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NHEX/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/global/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/ocean/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/ocean/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/Nino34/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/Nino34/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GFDL-ESM2G is a model
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NAM/___historical__.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/interpolated_model_clims/NAM/tas_GFDL-ESM2G_Amon_historical_r1i1p1_198501-200512.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.txt
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83b01756d0> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.json', '/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tas_2.5x2.5_regrid2_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/customRegions/tos_2.5x2.5_esmf_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/customRegions/tos_2.5x2.5_esmf_linear_metrics.json
+Failing line: -                            "son": "299.082", (we read: 299.098 )
+Failing line: -                            "jja": "299.080", (we read: 299.094 )
+Failing line: -                            "ann": "1.267" (we read: 1.24 )
+Failing line: -                            "ann": "-1.284", (we read: -1.295 )
+Failing line: -                            "son": "-1.538", (we read: -1.551 )
+Failing line: -                            "jja": "-1.054", (we read: -1.066 )
+Failing line: -                            "ann": "284.146", (we read: 284.113 )
+Failing line: -                            "son": "286.170", (we read: 286.139 )
+Failing line: -                            "mam": "281.775", (we read: 281.741 )
+Failing line: -                            "jja": "286.827", (we read: 286.792 )
+Failing line: -                            "djf": "281.842" (we read: 281.81 )
+Failing line: -                            "son": "284.606", (we read: 284.592 )
+Failing line: -                            "djf": "280.528" (we read: 280.5 )
+Failing line: -                            "ann": "1.541" (we read: 1.5 )
+Failing line: -                            "ann": "282.226", (we read: 282.239 )
+Failing line: -                            "djf": "283.628" (we read: 283.64 )
+Failing line: -                            "ann": "1.402" (we read: 1.38 )
+E
+
+
+
+---------------------------------------------------
+RUNNING: test/pcmdi/level_data_test.py
+---------------------------------------------------
+
+
+
+
+CDMS system error: No such file or directory
+CDMS I/O error: Opening file /home/zshaheen/github/pcmdi_metrics/test/pcmdi/data/_GISS-E2-H_historical_r0i0p0_mo_atm_Amon__ver-1_ac.nc
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GISS-E2-H is a model
+(1, 72) B4
+(72,) AF
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/global/_____.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/global/ta-200_GISS-E2-H_Amon_historical_r1i1p1_.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GISS-E2-H is a model
+(1, 24) B4
+(24,) AF
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/NHEX/_____.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/NHEX/ta-200_GISS-E2-H_Amon_historical_r1i1p1_.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GISS-E2-H is a model
+(1, 25) B4
+(25,) AF
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/SHEX/_____.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/SHEX/ta-200_GISS-E2-H_Amon_historical_r1i1p1_.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:default is an obs
+INFO:root:Could not figure out obs mask name from obs json file
+INFO:root:GISS-E2-H is a model
+(1, 25) B4
+(25,) AF
+INFO:root:Saving interpolated climatologies to: /home/zshaheen/github/pcmdi_metrics/TROPICS/_____.interpolated..-clim
+INFO:root:Results saved to a nc file: /home/zshaheen/github/pcmdi_metrics/TROPICS/ta-200_GISS-E2-H_Amon_historical_r1i1p1_.interpolated.linear.2.5x2.5-clim.nc
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Saving results to: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+INFO:root:Results saved to a json file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.json
+INFO:root:Results saved to a txt file: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.txt
+FILES: <pcmdi_metrics.io.base.Base object at 0x7f83a7943dd0> ['/home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.json']
+comparing: /home/zshaheen/github/pcmdi_metrics/pcmdi_install_test_results/metrics_results/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.json /home/zshaheen/github/pcmdi_metrics/test/pcmdi/level_data/ta-200_2.5x2.5_regrid2_linear_metrics.json
+.
+======================================================================
+ERROR: test_from_parameter_file (test_from_param.TestFromParam)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zshaheen/github/pcmdi_metrics/test/test_from_param.py", line 110, in test_from_parameter_file
+    good = float(l.split()[-1][1:-2])
+ValueError: could not convert string to float: N/A
+
+======================================================================
+ERROR: test_from_parameter_file (test_from_param.TestFromParam)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zshaheen/github/pcmdi_metrics/test/test_from_param.py", line 110, in test_from_parameter_file
+    good = float(l.split()[-1][1:-2])
+ValueError: could not convert string to float: N/A
+
+======================================================================
+ERROR: test_from_parameter_file (test_from_param.TestFromParam)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zshaheen/github/pcmdi_metrics/test/test_from_param.py", line 110, in test_from_parameter_file
+    good = float(l.split()[-1][1:-2])
+ValueError: could not convert string to float: N/A
+
+======================================================================
+ERROR: test_from_parameter_file (test_from_param.TestFromParam)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zshaheen/github/pcmdi_metrics/test/test_from_param.py", line 110, in test_from_parameter_file
+    good = float(l.split()[-1][1:-2])
+ValueError: could not convert string to float: N/A
+
+======================================================================
+ERROR: test_from_parameter_file (test_from_param.TestFromParam)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zshaheen/github/pcmdi_metrics/test/test_from_param.py", line 110, in test_from_parameter_file
+    good = float(l.split()[-1][1:-2])
+ValueError: could not convert string to float: N/A
+
+======================================================================
+FAIL: test_from_parameter_file (test_from_param.TestFromParam)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zshaheen/github/pcmdi_metrics/test/test_from_param.py", line 117, in test_from_parameter_file
+    self.assertTrue(ok)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_from_parameter_file (test_from_param.TestFromParam)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/zshaheen/github/pcmdi_metrics/test/test_from_param.py", line 117, in test_from_parameter_file
+    self.assertTrue(ok)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 10 tests in 218.813s
+
+FAILED (failures=2, errors=5)
+
